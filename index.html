@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Couch Potato</title>
+	<link rel="stylesheet" href="public/styles/style.css">
+	<link rel="icon" type="image/png" href="images/Potato0001logo.png"> <!-- Favicon -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport meta tag -->
+
+	<!-- Seo Starts -->
+	<meta name="keywords" content="">
+	<meta name="description" content="Generate your TV binge list">
+	<meta name="author" content="Leandra, Wendy , Christina">
+ 	<!-- /Seo ends -->
+
+ 	<!-- flickity -->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
+	 <!-- FontAwesome -->
+ 	<script src="https://use.fontawesome.com/a4e5a47520.js"></script>
+
+</head>
+<body>
+	<header>
+		<h1>Couch Potato</h1>
+		<p>Generate a TV Binge List, Potato.</p>
+	</header>
+
+	<main>
+		<form action="" >
+			<h2>Select Genre's for your Binge list </h2>
+			<div class="genreSelection">
+				<div class="genreItem">
+					<label for="actionAdventure">Action & Adventure</label>
+					<input type="radio" id="actionAdventure" value="10759">
+				</div>
+				
+				<div class="genreItem">
+					<label for="animation">Animation</label>
+					<input type="radio" id="animation" value="16">
+				</div>
+				
+				<div class="genreItem">
+					<label for="comedy">Comedy</label>
+					<input type="radio" id="comedy" value="35">
+				</div>
+
+				<div class="genreItem">
+					<label for="crime">Crime</label>
+					<input type="radio" id="crime" value="80">
+				</div>
+				
+				<div class="genreItem">
+					<label for="documentary">Documentary</label>
+					<input type="radio" id="documentary" value="99">
+				</div>
+				
+				<div class="genreItem">
+					<label for="drama">Drama</label>
+					<input type="radio" id="drama" value="18">
+				</div>
+				
+				<div class="genreItem">
+					<label for="family">Family</label>
+					<input type="radio" id="family" value="10751">
+				</div>
+				
+				<div class="genreItem">
+					<label for="kids">Kids</label>
+					<input type="radio" id="kids" value="10762">
+				</div>
+				
+				<div class="genreItem">
+					<label for="mystery">Mystery</label>
+					<input type="radio" id="mystery" value="9648">
+				</div>
+			
+				<div class="genreItem">
+					<label for="news">News</label>
+					<input type="radio" id="news" value="10763">
+				</div>
+				
+				<div class="genreItem">
+					<label for="reality">Reality</label>
+					<input type="radio" id="reality" value="10764">
+				</div>
+				
+				<div class="genreItem">
+					<label for="scifiFantasy">Sci-fi & Fantasy</label>
+					<input type="radio" id="scifiFantasy" value="10765">
+				</div>
+				
+				<div class="genreItem">
+					<label for="soap">Soap</label>
+					<input type="radio" id="soap" value="10766">
+				</div>
+				
+				<div class="genreItem">
+					<label for="talk">Talk</label>
+					<input type="radio" id="talk" value="10767">
+				</div>
+				
+				<div class="genreItem">
+					<label for="warPolitics">War & Politics</label>
+					<input type="radio" id="warPolitics" value="10768">
+				</div>
+				
+				<div class="genreItem">
+					<label for="western">Western</label>
+					<input type="radio" id="western" value="37">
+				</div>
+				
+			</div> <!-- /genreSelection -->
+			
+			<h2>How many hours a day will you binge for?</h2>
+			<div>
+				<input type="number" min="1" max="24" id="numOfHours">
+			</div>
+			
+			<h2>How many days are you binging?</h2>
+			<div class="timeSelection">
+				<!-- Add potato photos and possibility a carousal -->
+
+				<div class="timeItem">
+					<label for="onlyToday">
+						Only today ( 1 day)
+						<img src="images/Potato0001.png" alt="potato" class="potatoImg"> 
+					</label>
+					<input type="radio" name="numOfDays" id="onlyToday" value="onlyToday">
+				</div>
+				
+				<div class="timeItem">
+					<label for="day">
+						Stay-cation (2 day)
+						<img src="images/Potato0002.png" alt="potato" class="potatoImg">
+					</label>
+					<input type="radio" name="numOfDays" id="day" value="day">
+				</div>
+				
+				<div class="timeItem">
+					<label for="weekend">
+						A weekend ( 3 days)
+						<img src="images/Potato0003.png" alt="potato" class="potatoImg">
+					</label>
+					<input type="radio" name="numOfDays" id="weekend" value="weekend">
+				</div>
+				
+				<div class="timeItem">
+					<label for="longWeekend">
+						A long weekend ( 4 days)
+						<img src="images/Potato0004.png" alt="potato" class="potatoImg">
+					</label>
+					<input type="radio" name="numOfDays" id="longWeekend" value="longWeekend">
+				</div>
+				
+				<div class="timeItem">
+					<label for="week">
+						A week ( 7 days)
+						<img src="images/Potato0005.png" alt="potato" class="potatoImg">
+					</label>
+					<input type="radio" name="numOfDays" id="week" value="week">
+				</div>
+				
+				<div class="timeItem">
+					<label for="weekPlus">
+						More then a week ( 7 plus)
+						<img src="images/Potato0006.png" alt="potato" class="potatoImg">
+					</label>
+					<input type="radio" name="numOfDays" id="weekPlus" value="weekPlus">
+				</div>
+				
+			</div> <!-- timeSelection -->
+			
+			<input type="submit" value="submit">
+
+		</form>
+	</main>
+	
+	<section class="results">
+		
+
+	</section> <!-- /results -->
+
+	<footer>
+		<p>Developed and designed by <a href="personal site">Christina Ampelikiotis</a>, <a href="personal site">Wendy Yang</a>, and <a href="www.leandrasilver.com">Leandra Silver</a>. </p>
+		<p>Copyright 2016</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- SmoothScroll -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+
+	<!-- Flickity-->
+	<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+	
+	<script src="public/scripts/main.js"></script>
+
+</body>
+</html>
