@@ -5,6 +5,20 @@ var couchPotatoApp = {};
 var userHoursSelected = 24; //Make dynamic later
 
 couchPotatoApp.getInfo = function() {
+
+	$('input[type=radio]').on('click', function() {
+		var previousValue = $(this).attr('previousValue');
+		var name = $(this).attr('name');
+
+		if (previousValue == 'checked') {
+			$(this).removeAttr('checked');
+			$(this).attr('previousValue', false);
+		} else {
+			$('input[name='+name+']:radio').attr('previousValue', false);
+			$(this).attr('previousValue', 'checked');
+		}
+	});
+
 	$('form').on('submit', function(e) {
 		e.preventDefault();
 
@@ -62,6 +76,12 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData	.poster_path);
 		$('.results').append($tvTitle, $resultsImage);
 	}
+
+	if(potato selected === 8) {
+		console.log(tvIDsResultsData)
+	}
+
+
 }; //end couchPotatoApp.filterTv
 
 couchPotatoApp.init = function() {
