@@ -1,4 +1,24 @@
 // General Styles
+.flexParent {
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-wrap:wrap;
+}
+
+// input[type="radio"] {
+// 	display:none;
+// }
+
+.timeItem {
+	flex-basis:16%;
+}
+
+.wrapper {
+	width:80%;
+	max-width:1100px;
+	margin:0 auto;
+}
 
 img {
 	width: 500px;

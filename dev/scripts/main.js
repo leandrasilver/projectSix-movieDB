@@ -1,5 +1,4 @@
 // Main JS
-
 var couchPotatoApp = {};
 
 couchPotatoApp.getInfo = function() {
@@ -65,17 +64,13 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 	// Tv data property variables to append to result section
 	var runTime = tvIDsResultsData.episode_run_time[0];
 	var episodesNum = tvIDsResultsData.number_of_episodes;
-	var seasonsNum = tvIDsResultsData.number_of_seasons;
-
-	var totalRunTime = (runTime * episodesNum * seasonsNum) / 60 / userHoursSelected ;
-
-	// Show results depending on how many days a user wants to binge, and if longer then a week 
-	if (totalRunTime >= userDaysSelected) {
+	
 		// console.log(totalRunTime);
 		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
+		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData	.poster_path);
 		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
-		$('.results').append($tvTitle, $resultsImage, $resultsVoteAvg);
+		$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
 	}
 
 }; //end couchPotatoApp.filterTv
