@@ -58,6 +58,7 @@ couchPotatoApp.getTVInfo = function (data) {
 }; //end getTVinfo
 
 couchPotatoApp.filterTv = function (tvIDsResultsData) {
+	console.log(tvIDsResultsData);
 	// Amount of hours in a day the user would like to binge
 	//Amount of days a user would like to binge
 	var userHoursSelected = $('input[type=number]').val();
@@ -69,20 +70,10 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 	var seasonsNum = tvIDsResultsData.number_of_seasons;
 
 	var totalRunTime = runTime * episodesNum * seasonsNum / 60 / userHoursSelected;
-	console.log('total Run Time', totalRunTime);
-	// Min days will be one day less then the amount of days selected to watch
-	var minDays = userDaysSelected - 1;
-	console.log('days selected', userDaysSelected);
-	console.log('min days', minDays);
+
 	// Show results depending on how many days a user wants to binge, and if longer then a week 
-	if (totalRunTime > 10 && totalRunTime < 50) {
+	if (totalRunTime >= userDaysSelected) {
 		// console.log(totalRunTime);
-		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
-		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
-		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
-		$('.results').append($tvTitle, $resultsImage, $resultsVoteAvg);
-	} else if (totalRunTime > userDaysSelected && totalRunTime > 30) {
-		console.log('over a week of binge');
 		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
 		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
