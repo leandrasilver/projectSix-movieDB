@@ -67,29 +67,13 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 	var runTime = tvIDsResultsData.episode_run_time[0];
 	var episodesNum = tvIDsResultsData.number_of_episodes;
 
-<<<<<<< HEAD
-	var totalRunTime = runTime * episodesNum * seasonsNum / 60 / userHoursSelected;
+	// console.log(totalRunTime);
+	var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
+	var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
+	var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+	var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
 
-	// Show results depending on how many days a user wants to binge, and if longer then a week 
-	if (totalRunTime >= userDaysSelected) {
-=======
-	var totalRunTime = runTime * episodesNum / 60 / userHoursSelected;
-	console.log('total Run Time', totalRunTime);
-
-	// Show results depending on how many days a user wants to binge, and if longer then a week 
-	if (totalRunTime > userDaysSelected) {
->>>>>>> a94fcd12853e86e5dc8a29c86e86465a601947d2
-		// console.log(totalRunTime);
-		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
-		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
-		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
-		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
-<<<<<<< HEAD
-		$('.results').append($tvTitle, $resultsImage, $resultsVoteAvg);
-=======
-		$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
->>>>>>> a94fcd12853e86e5dc8a29c86e86465a601947d2
-	}
+	$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
 }; //end couchPotatoApp.filterTv
 
 couchPotatoApp.init = function () {

@@ -64,16 +64,15 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 	// Tv data property variables to append to result section
 	var runTime = tvIDsResultsData.episode_run_time[0];
 	var episodesNum = tvIDsResultsData.number_of_episodes;
-	
-		// console.log(totalRunTime);
-		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
-		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
-		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData	.poster_path);
-		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
-		$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
-	}
 
-}; //end couchPotatoApp.filterTv
+	// console.log(totalRunTime);
+	var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
+	var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
+	var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+	var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData	.poster_path);
+	
+	$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
+} //end couchPotatoApp.filterTv
 
 couchPotatoApp.init = function() {
 	couchPotatoApp.getInfo();

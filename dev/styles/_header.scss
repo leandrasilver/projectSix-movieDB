@@ -1,1 +1,19 @@
 // Header Styles
+
+header {
+	font-family: $headerFont;
+	height: 100vh;
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			font-size: 6rem;
+		}
+		h3 {
+			font-size: 3.5rem;
+		}
+	}
+}
