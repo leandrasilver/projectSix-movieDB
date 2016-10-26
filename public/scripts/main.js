@@ -4,8 +4,6 @@
 
 var couchPotatoApp = {};
 
-var userHoursSelected = 24; //Make dynamic later
-
 couchPotatoApp.getInfo = function () {
 	$('form').on('submit', function (e) {
 		e.preventDefault();
@@ -46,23 +44,35 @@ couchPotatoApp.getTVInfo = function (data) {
 }; //end getTVinfo
 
 couchPotatoApp.filterTv = function (tvIDsResultsData) {
-
 	// Amount of hours in a day the user would like to binge
+	//Amount of days a user would like to binge
 	var userHoursSelected = $('input[type=number]').val();
-	console.log(userHoursSelected);
+	var userDaysSelected = $('input[name="numOfDays"]:checked').val();
 
+	// Tv data property variables to append to result section
 	var runTime = tvIDsResultsData.episode_run_time[0];
 	var episodesNum = tvIDsResultsData.number_of_episodes;
 	var seasonsNum = tvIDsResultsData.number_of_seasons;
 
 	var totalRunTime = runTime * episodesNum * seasonsNum / 60 / userHoursSelected;
-
+	console.log('total Run Time', totalRunTime);
+	// Min days will be one day less then the amount of days selected to watch
+	var minDays = userDaysSelected - 1;
+	console.log('days selected', userDaysSelected);
+	console.log('min days', minDays);
+	// Show results depending on how many days a user wants to binge, and if longer then a week 
 	if (totalRunTime > 10 && totalRunTime < 50) {
-		console.log(tvIDsResultsData);
-		console.log(totalRunTime);
+		// console.log(totalRunTime);
 		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
-		$('.results').append($tvTitle, $resultsImage);
+		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+		$('.results').append($tvTitle, $resultsImage, $resultsVoteAvg);
+	} else if (totalRunTime > userDaysSelected && totalRunTime > 30) {
+		console.log('over a week of binge');
+		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
+		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
+		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+		$('.results').append($tvTitle, $resultsImage, $resultsVoteAvg);
 	}
 }; //end couchPotatoApp.filterTv
 
