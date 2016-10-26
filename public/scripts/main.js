@@ -62,6 +62,7 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
 		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+		$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
 	}
 }; //end couchPotatoApp.filterTv
 
