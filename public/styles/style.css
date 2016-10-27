@@ -141,6 +141,95 @@ li {
 img {
   max-width: 100%; }
 
+@keyframes bounce {
+  50% {
+    bottom: 0px; } }
+
+header {
+  font-family: "BioRhyme", serif;
+  font-weight: 800;
+  height: 100vh;
+  position: relative; }
+  header .wrapper {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: center;
+        align-items: center; }
+    header .wrapper h1 {
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 10rem;
+      font-family: "Ultra", serif;
+      font-weight: 400;
+      letter-spacing: 9px;
+      margin-bottom: 0;
+      text-align: center;
+      color: #1c0040; }
+    header .wrapper h3 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'BioRhyme', serif;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 0; }
+    header .wrapper img {
+      width: 75%; }
+    header .wrapper i {
+      font-size: 50px;
+      padding: 30px;
+      bottom: 10px;
+      position: absolute;
+      transform: translateX(-50%);
+      color: #1c0040;
+      animation: 1s bounce infinite;
+      cursor: pointer; }
+
+footer {
+  margin-top: 70px;
+  background: #d3d3d3;
+  color: #1c0040;
+  padding: 50px; }
+  footer .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    footer .wrapper p {
+      margin: 5px 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: "Source Sans Pro", sans-serif;
+      letter-spacing: 1px;
+      line-height: 1.5rem; }
+      footer .wrapper p a {
+        text-decoration: none;
+        color: #1c0040; }
+        footer .wrapper p a:hover {
+          color: #4c618c; }
+
+@media (max-width: 768px) {
+  footer .wrapper p {
+    font-size: 1.2rem; } }
+
+@media (max-width: 650px) {
+  footer {
+    padding: 50px 20px; }
+    footer .wrapper {
+      width: 60%; } }
+
+@media (max-width: 414px) {
+  footer .wrapper {
+    width: 80%; } }
+
 .wrapper {
   width: 100%;
   max-width: 1100px;
@@ -492,6 +581,24 @@ fieldset.hoursADay {
     width: 100%; }
   fieldset.daysBinge .timeItem {
     width: 45%; }
+  .hoursADay .wrapper {
+    display: block; }
+    .hoursADay .wrapper h2 {
+      text-align: center;
+      margin-left: 0; }
+    .hoursADay .wrapper div {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      width: 100%;
+      margin-left: 0; }
+  header .wrapper h3 {
+    font-size: 2rem; }
+  header .wrapper h1 {
+    font-size: 7rem; }
   h1 {
     font-size: 2rem; } }
 
@@ -595,3 +702,8 @@ footer {
 @media (max-width: 414px) {
   footer .wrapper {
     width: 80%; } }
+    height: 150px; }
+  header h1 {
+    padding-bottom: 30px; }
+  header h3 {
+    padding-bottom: 20px; } }
