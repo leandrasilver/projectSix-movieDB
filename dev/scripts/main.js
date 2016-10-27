@@ -82,6 +82,7 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 		$tvShowContainer.append($resultsImage, $tvTitle, $seasonsNum, $resultsVoteAvg);
 
 		$('.results .wrapper').append($tvShowContainer);
+
 	}
 } //end couchPotatoApp.filterTv
 
