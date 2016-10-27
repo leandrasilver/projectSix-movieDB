@@ -159,7 +159,7 @@ img {
 h2 {
   font-size: 3rem;
   text-align: center;
-  font-family: "Abhaya Libre", serif;
+  font-family: "BioRhyme", serif;
   color: #1c0040; }
 
 input[type="radio"] {
@@ -175,7 +175,7 @@ input[type="radio"] {
   -ms-flex-align: center;
       align-items: center;
   width: 100%;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "BioRhyme", serif; }
   .genreSelection .genreItem {
     width: calc(25% - 10px);
     height: 265px;
@@ -269,7 +269,7 @@ input[type="radio"] {
     .timeItem label p {
       margin: 30px 0 0 0;
       font-size: 2rem;
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: "BioRhyme", serif;
       color: #4c618c; }
     .timeItem label .potatoImg {
       width: 100%;
@@ -361,22 +361,33 @@ input[type="radio"] {
     height: 150px; } }
 
 header {
-  font-family: "Abhaya Libre", serif;
-  height: 100vh; }
+  font-family: "BioRhyme", serif;
+  font-weight: 800; }
   header .wrapper {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
     -ms-flex-align: center;
         align-items: center; }
     header .wrapper h1 {
-      font-size: 6rem; }
+      font-size: 9rem;
+      font-family: 'Ultra', serif;
+      letter-spacing: 10px;
+      margin-bottom: 0;
+      color: #1c0040; }
     header .wrapper h3 {
-      font-size: 3.5rem; }
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'BioRhyme', serif;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 0; }
+    header .wrapper img {
+      width: 75%; }
 
 footer .wrapper {
   display: -ms-flexbox;
