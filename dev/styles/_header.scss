@@ -1,9 +1,16 @@
-// Header Styles
+// Animations
+@keyframes bounce {
+	50% {
+		bottom:0px;
+	}
+}
 
+// Header Styles
 header {
 	font-family: $headerFont;
 	font-weight: 800;
 	height:100vh;
+	position:relative;
 	// background-color: rgba(28,0,64,0.1);
 	.wrapper {
 		height: 100%;
@@ -31,5 +38,16 @@ header {
 		img{
 			width:75%;
 		}
+		i {
+			font-size:50px;
+			padding:30px;
+			bottom:10px;
+			position:absolute;
+			transform:translateX(-50%);
+			color: $midnightBlue;
+			animation: 1s bounce infinite;
+			cursor:pointer;
+		}
 	}
 }
+
