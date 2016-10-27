@@ -205,7 +205,7 @@ fieldset {
 
 // Styles for hours a day section 
 fieldset.hoursADay {
-	background-color:rgba(28,0,64,0.8);
+	background-color:rgba(28,0,64,1);
 }
 
 .hoursADay .wrapper {
@@ -290,8 +290,6 @@ fieldset.hoursADay {
 	}
 }
 
-
-
 // Breakpoints
 
 @media (max-width: 940px) {
@@ -343,19 +341,19 @@ fieldset.hoursADay {
 	}
 
 	.hoursADay .wrapper {
-	display: block;
-	h2 {
-		text-align: center;
-		margin-left:0;
+		display: block;
+		h2 {
+			text-align: center;
+			margin-left:0;
+		}
+		div {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			width:100%;
+			margin-left:0;
+		}
 	}
-	div {
-		display:flex;
-		justify-content:center;
-		align-items:center;
-		width:100%;
-		margin-left:0;
-	}
-}
 }
 
 @media (max-width: 414px) {
