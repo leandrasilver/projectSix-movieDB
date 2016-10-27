@@ -334,7 +334,7 @@ header {
   font-family: "BioRhyme", serif;
   font-weight: 800; }
   header .wrapper {
-    height: 100%;
+    height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
