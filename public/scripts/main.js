@@ -5,6 +5,7 @@ var couchPotatoApp = {};
 
 couchPotatoApp.getInfo = function () {
 
+	//Enable unclicking a radio button
 	$('input[type=radio]').on('click', function () {
 		var previousValue = $(this).attr('previousValue');
 		var name = $(this).attr('name');
@@ -50,30 +51,40 @@ couchPotatoApp.getTVInfo = function (data) {
 				api_key: 'd349ab4b8dd2391d9f24c9ba68fc9819'
 			}
 		}).then(function (tvIDsResultsData) {
-			// console.log(tvIDsResultsData);
 			couchPotatoApp.filterTv(tvIDsResultsData);
 		});
 	}
 }; //end getTVinfo
 
 couchPotatoApp.filterTv = function (tvIDsResultsData) {
-	console.log(tvIDsResultsData);
+
 	// Amount of hours in a day the user would like to binge
 	//Amount of days a user would like to binge
+
 	var userHoursSelected = $('input[type=number]').val();
 	var userDaysSelected = $('input[name="numOfDays"]:checked').val();
 
-	// Tv data property variables to append to result section
-	var runTime = tvIDsResultsData.episode_run_time[0];
+	var epRunTime = tvIDsResultsData.episode_run_time[0];
 	var episodesNum = tvIDsResultsData.number_of_episodes;
 
-	// console.log(totalRunTime);
-	var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
-	var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
-	var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
-	var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
+	var totalRunTime = epRunTime * episodesNum / 60 / userHoursSelected;
 
-	$('.results .wrapper').append($tvTitle, $resultsImage, $resultsVoteAvg, $seasonsNum);
+	if (totalRunTime >= userDaysSelected) {
+		console.log(tvIDsResultsData);
+
+		//How to append multiple TV results and create HTML containers for each show?
+
+		// Tv data property variables to append to result section
+		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
+		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
+		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
+
+		$('.showName').append($tvTitle);
+		$('.seasons').append($seasonsNum);
+		$('.voterAvg').append($resultsVoteAvg);
+		$('.tvImg').append($resultsImage);
+	}
 }; //end couchPotatoApp.filterTv
 
 couchPotatoApp.init = function () {
@@ -82,6 +93,7 @@ couchPotatoApp.init = function () {
 
 $(function () {
 	couchPotatoApp.init();
+
 	// SmoothScroll on anchor tags
 	$('a').smoothScroll();
 });

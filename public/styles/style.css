@@ -191,13 +191,15 @@ input[type="radio"] {
       font-size: 2rem;
       letter-spacing: 1px;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+      transition: 0.3s ease; }
       .genreSelection .genreItem label i {
         font-size: 8rem;
         margin-bottom: 20px; }
       .genreSelection .genreItem label:hover, .genreSelection .genreItem label:focus, .genreSelection .genreItem label:active {
         color: #68c2cc;
-        cursor: pointer; }
+        cursor: pointer;
+        opacity: 0.8; }
   .genreSelection .genreNoMargL {
     margin-left: 0; }
   .genreSelection .genreNoMargR {
@@ -236,7 +238,8 @@ input[type="radio"] {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/western-min.png"); }
 
 .timeItem {
-  width: 16%;
+  width: 13%;
+  margin-bottom: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -253,11 +256,20 @@ input[type="radio"] {
     -ms-flex-align: center;
         align-items: center; }
     .timeItem label p {
-      font-size: 2rem; }
+      margin: 30px 0 0 0;
+      font-size: 2rem;
+      font-family: "Source Sans Pro", sans-serif;
+      color: #4c618c; }
     .timeItem label .potatoImg {
-      width: 100%; }
+      width: 100%;
+      transition: transform 0.3s ease; }
     .timeItem label:hover, .timeItem label:focus, .timeItem label:active {
       cursor: pointer; }
+  .timeItem input[type=radio]:checked + label img {
+    transform: scale(1.2); }
+
+.timeItem:hover label img, .timeItem:focus label img {
+  transform: scale(1.2); }
 
 .hoursADay .wrapper {
   display: -ms-flexbox;
@@ -275,17 +287,19 @@ input[type="radio"] {
       height: 35px;
       font-size: 1.7rem; }
 
-input[type=submit] {
-  width: 20%;
-  height: 50px;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #68c2cc;
-  color: #68c2cc;
-  background: none; }
-  input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
-    background: #68c2cc;
-    color: white; }
+.submitWrap {
+  text-align: center; }
+  .submitWrap input[type=submit] {
+    width: 20%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #68c2cc;
+    color: #68c2cc;
+    background: none; }
+    .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:focus, .submitWrap input[type=submit]:active {
+      background: #68c2cc;
+      color: white; }
 
 .results img {
   width: 500px; }
