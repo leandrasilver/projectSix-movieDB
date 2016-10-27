@@ -162,8 +162,19 @@ h2 {
   font-family: "BioRhyme", serif;
   color: #1c0040; }
 
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "BioRhyme", serif;
+  color: #1c0040; }
+
 input[type="radio"] {
   display: none; }
+
+fieldset {
+  border: 0;
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 .genreSelection {
   display: -ms-flexbox;
@@ -248,6 +259,16 @@ input[type="radio"] {
   .genreSelection .genreWestern {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/western-min.png"); }
 
+.daysBinge {
+  background-color: #d5dbe8; }
+  .daysBinge .timeSelection {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: baseline;
+        align-items: baseline; }
+
 .timeItem {
   width: 13%;
   margin-bottom: 20px;
@@ -268,35 +289,71 @@ input[type="radio"] {
         align-items: center; }
     .timeItem label p {
       margin: 30px 0 0 0;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-family: "BioRhyme", serif;
-      color: #4c618c; }
+      text-align: center;
+      padding: 10px;
+      z-index: 1;
+      border: 2px solid #e6eaf1;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 5px; }
     .timeItem label .potatoImg {
       width: 100%;
-      transition: transform 0.3s ease; }
+      transition: transform 0.3s ease;
+      z-index: 2; }
     .timeItem label:hover, .timeItem label:focus, .timeItem label:active {
       cursor: pointer; }
   .timeItem input[type=radio]:checked + label img {
     transform: scale(1.2); }
+  .timeItem input[type=radio]:checked + label p {
+    transform: scale(1.1);
+    border: 2px solid rgba(28, 0, 64, 0.8);
+    box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
+    background-color: #edf8f9; }
 
 .timeItem:hover label img, .timeItem:focus label img {
   transform: scale(1.2); }
 
+.timeItem:hover label p, .timeItem:focus label p {
+  transform: scale(1.1);
+  border: 2px solid rgba(28, 0, 64, 0.8);
+  box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
+  background-color: #edf8f9; }
+
+fieldset.hoursADay {
+  background-color: rgba(28, 0, 64, 0.8); }
+
 .hoursADay .wrapper {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
   .hoursADay .wrapper h2 {
-    text-align: left; }
+    text-align: left;
+    margin-left: 10px;
+    color: white; }
   .hoursADay .wrapper div {
-    width: 30%; }
+    width: 100px;
+    margin-left: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
     .hoursADay .wrapper div input[type=number] {
-      width: 100%;
+      padding-left: 10px;
+      width: 70px;
+      color: #4d3341;
       height: 35px;
-      font-size: 1.7rem; }
+      font-size: 2rem;
+      border-radius: 10px;
+      border: 2px solid #68c2cc; }
+      .hoursADay .wrapper div input[type=number]:focus, .hoursADay .wrapper div input[type=number]:active {
+        outline: none;
+        box-shadow: 1px 1px 5px #68c2cc; }
 
 .submitWrap {
   text-align: center; }
@@ -308,9 +365,14 @@ input[type="radio"] {
     border: 1px solid #68c2cc;
     color: #68c2cc;
     background: none; }
-    .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:focus, .submitWrap input[type=submit]:active {
+    .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:active {
       background: #68c2cc;
       color: white; }
+    .submitWrap input[type=submit]:focus {
+      outline: none;
+      background: #68c2cc;
+      color: white;
+      box-shadow: 1px 1px 5px #68c2cc; }
 
 .results {
   text-align: center;
@@ -349,11 +411,36 @@ input[type="radio"] {
     .genreSelection .genreItem label {
       font-size: 2rem; }
       .genreSelection .genreItem label i {
-        font-size: 4rem; } }
+        font-size: 4rem; }
+  .timeSelection {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  fieldset.daysBinge .timeItem {
+    width: 30%;
+    margin-bottom: 30px; }
+    fieldset.daysBinge .timeItem label p {
+      font-size: 1.4rem;
+      margin-top: 10px; } }
 
 @media (max-width: 480px) {
   .genreSelection {
-    width: 100%; } }
+    width: 100%; }
+  fieldset.daysBinge .timeItem {
+    width: 45%; }
+  .hoursADay .wrapper {
+    display: block; }
+    .hoursADay .wrapper h2 {
+      text-align: center;
+      margin-left: 0; }
+    .hoursADay .wrapper div {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      width: 100%;
+      margin-left: 0; } }
 
 @media (max-width: 414px) {
   .genreSelection .genreItem {
@@ -374,11 +461,12 @@ header {
     -ms-flex-align: center;
         align-items: center; }
     header .wrapper h1 {
-      font-size: 9rem;
+      font-size: 10rem;
       font-family: 'Ultra', serif;
-      letter-spacing: 10px;
+      letter-spacing: 9px;
       margin-bottom: 0;
-      color: #1c0040; }
+      color: #1c0040;
+      font-weight: 400; }
     header .wrapper h3 {
       text-align: center;
       font-size: 3rem;

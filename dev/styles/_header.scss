@@ -11,12 +11,13 @@ header {
 		justify-content: flex-start;
 		align-items: center;
 		h1 {
-			font-size: 9rem;
+			font-size: 10rem;
 			// font-family: 'Shadows Into Light', cursive;
 			font-family: 'Ultra', serif;
-			letter-spacing: 10px;
+			letter-spacing: 9px;
 			margin-bottom: 0;
 			color: $midnightBlue;
+			font-weight: 400;
 		}
 		h3 {
 			text-align: center;

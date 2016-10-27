@@ -19,8 +19,21 @@ h2 {
 	color: $midnightBlue;
 }
 
+h3 {
+	font-size: 2rem;
+	text-align: center;
+	font-family: $headerFont;
+	color: $midnightBlue;
+}
+
 input[type="radio"] {
 	display:none;
+}
+
+fieldset {
+	border:0;
+	padding-top:50px;
+	padding-bottom:50px;
 }
 
 //Genre Selection Styles
@@ -122,6 +135,19 @@ input[type="radio"] {
 	}
 }
 
+
+// Styles for potato section days Binge
+
+.daysBinge {
+	background-color:lighten($slate, 45%);
+	.timeSelection {
+		display:flex;
+		justify-content:space-between;
+		// So the potatos are always aligned
+		align-items:baseline;
+	}
+}
+
 .timeItem {
 	width: 13%;
 	margin-bottom: 20px;
@@ -135,13 +161,19 @@ input[type="radio"] {
 		align-items: center;
 		p {
 			margin: 30px 0 0 0;
-			font-size: 2rem;
+			font-size: 1.6rem;
 			font-family: $bodyFont;
-			color: $slate;
+			text-align:center;
+			padding:10px;
+			z-index:1;
+			border:2px solid lighten($slate, 50%);
+			background-color: rgba(255,255,255,0.5);
+			border-radius:5px;
 		}
 		.potatoImg {
 			width: 100%;
 			transition: transform 0.3s ease;
+			z-index:2;
 		}
 		&:hover, &:focus, &:active {
 			cursor: pointer;
@@ -150,27 +182,59 @@ input[type="radio"] {
 	input[type=radio]:checked + label img {
 		transform: scale(1.2);
 	}
+	input[type=radio]:checked + label p {
+		transform:scale(1.1);
+		border:2px solid rgba(28,0,64,0.8);
+		box-shadow:1px 1px 5px rgba(28,0,64,0.3);
+		background-color: lighten($turq,35%);
+	}
+
 }
 
 .timeItem:hover, .timeItem:focus {
 	label img {
 		transform: scale(1.2);
 	}
+	label p {
+		transform:scale(1.1);
+		border:2px solid rgba(28,0,64,0.8);
+		box-shadow:1px 1px 5px rgba(28,0,64,0.3);
+		background-color: lighten($turq,35%);
+	}
+}
+
+// Styles for hours a day section 
+fieldset.hoursADay {
+	background-color:rgba(28,0,64,0.8);
 }
 
 .hoursADay .wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	h2 {
 		text-align: left;
+		margin-left:10px;
+		color:white;
 	}
 	div {
-		width: 30%;
+		width:100px;
+		margin-left:20px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
 		input[type=number] {
-			width: 100%;
+			padding-left:10px;
+			width: 70px;
+			color:$darkSlate;
 			height: 35px;
-			font-size: 1.7rem;
+			font-size: 2rem;
+			border-radius:10px;
+			border:2px solid $turq;
+			&:focus,&:active {
+				outline:none;
+				box-shadow:1px 1px 5px $turq;
+			}
 		}
 	}
 }
@@ -185,12 +249,20 @@ input[type="radio"] {
 		border: 1px solid $turq;
 		color: $turq;
 		background: none;
-		&:hover, &:focus, &:active {
+		&:hover,&:active  {
 			background: $turq;
 			color: white;
 		}
+		&:focus{
+			outline:none;
+			background: $turq;
+			color: white;
+			box-shadow:1px 1px 5px $turq;
+		}
 	}
 }
+
+// Results Section Styles
 
 .results {
 	text-align: center;
@@ -218,6 +290,10 @@ input[type="radio"] {
 	}
 }
 
+
+
+// Breakpoints
+
 @media (max-width: 940px) {
 	.genreSelection {
 		width: 80%;
@@ -242,12 +318,44 @@ input[type="radio"] {
 			}
 		}
 	}
+
+	.timeSelection {
+		flex-wrap:wrap;
+	}
+
+	fieldset.daysBinge .timeItem {
+		width:30%;
+		margin-bottom:30px;
+		label p {
+			font-size:1.4rem;
+			margin-top:10px;
+		}
+	}
 }
 
 @media (max-width: 480px) {
 	.genreSelection {
 		width: 100%;
 	}
+	
+	fieldset.daysBinge .timeItem {
+		width:45%;
+	}
+
+	.hoursADay .wrapper {
+	display: block;
+	h2 {
+		text-align: center;
+		margin-left:0;
+	}
+	div {
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		width:100%;
+		margin-left:0;
+	}
+}
 }
 
 @media (max-width: 414px) {
