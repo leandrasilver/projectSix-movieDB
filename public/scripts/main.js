@@ -40,7 +40,7 @@ couchPotatoApp.getInfo = function () {
 
 couchPotatoApp.getTVInfo = function (data) {
 	var tvIDsResults = data.results;
-	// console.log(tvIDsResults);
+
 	for (var i = 0; i < tvIDsResults.length; i++) {
 		var id = tvIDsResults[i].id;
 		$.ajax({
@@ -72,18 +72,18 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 	if (totalRunTime >= userDaysSelected) {
 		console.log(tvIDsResultsData);
 
-		//How to append multiple TV results and create HTML containers for each show?
+		//TV Shows Results Container
+		var $tvShowContainer = $('<article>').addClass('tvShow');
 
 		// Tv data property variables to append to result section
 		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
-		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
-		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
+		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
+		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
 
-		$('.showName').append($tvTitle);
-		$('.seasons').append($seasonsNum);
-		$('.voterAvg').append($resultsVoteAvg);
-		$('.tvImg').append($resultsImage);
+		$tvShowContainer.append($resultsImage, $tvTitle, $seasonsNum, $resultsVoteAvg);
+
+		$('.results .wrapper').append($tvShowContainer);
 	}
 }; //end couchPotatoApp.filterTv
 
@@ -93,7 +93,6 @@ couchPotatoApp.init = function () {
 
 $(function () {
 	couchPotatoApp.init();
-
 	// SmoothScroll on anchor tags
 	$('a').smoothScroll();
 });
