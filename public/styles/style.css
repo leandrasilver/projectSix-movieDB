@@ -141,10 +141,15 @@ li {
 img {
   max-width: 100%; }
 
+@keyframes bounce {
+  50% {
+    bottom: 0px; } }
+
 header {
   font-family: "BioRhyme", serif;
   font-weight: 800;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   header .wrapper {
     height: 100%;
     display: -ms-flexbox;
@@ -161,6 +166,7 @@ header {
       font-family: 'Ultra', serif;
       letter-spacing: 9px;
       margin-bottom: 0;
+      text-align: center;
       color: #1c0040;
       font-weight: 400; }
     header .wrapper h3 {
@@ -172,6 +178,15 @@ header {
       margin-bottom: 0; }
     header .wrapper img {
       width: 75%; }
+    header .wrapper i {
+      font-size: 50px;
+      padding: 30px;
+      bottom: 10px;
+      position: absolute;
+      transform: translateX(-50%);
+      color: #1c0040;
+      animation: 1s bounce infinite;
+      cursor: pointer; }
 
 footer {
   margin-top: 70px;
@@ -202,16 +217,6 @@ footer {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto; }
-
-.flexParent {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
 
 h2 {
   font-size: 3rem;
@@ -384,7 +389,7 @@ fieldset {
   background-color: #edf8f9; }
 
 fieldset.hoursADay {
-  background-color: rgba(28, 0, 64, 0.8); }
+  background-color: #1c0040; }
 
 .hoursADay .wrapper {
   display: -ms-flexbox;
@@ -394,7 +399,7 @@ fieldset.hoursADay {
   -ms-flex-align: center;
       align-items: center; }
   .hoursADay .wrapper h2 {
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
     color: white; }
   .hoursADay .wrapper div {
@@ -416,13 +421,13 @@ fieldset.hoursADay {
       border: 2px solid #68c2cc; }
       .hoursADay .wrapper div input[type=number]:focus, .hoursADay .wrapper div input[type=number]:active {
         outline: none;
-        box-shadow: 1px 1px 5px #68c2cc; }
+        box-shadow: 1px 1px 5px #1c0040; }
 
 .submitWrap {
   text-align: center; }
   .submitWrap input[type=submit] {
     margin-top: 70px;
-    width: 20%;
+    min-width: 100px;
     height: 50px;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -485,7 +490,25 @@ fieldset.hoursADay {
     margin-bottom: 30px; }
     fieldset.daysBinge .timeItem label p {
       font-size: 1.4rem;
-      margin-top: 10px; } }
+      margin-top: 10px; }
+  .hoursADay .wrapper {
+    display: block; }
+    .hoursADay .wrapper h2 {
+      text-align: center;
+      margin-left: 0; }
+    .hoursADay .wrapper div {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      width: 100%;
+      margin-left: 0; }
+    .hoursADay .wrapper input[type=number] {
+      margin-top: 40px; }
+  .results .wrapper .slider .tvShow {
+    width: 50%; } }
 
 @media (max-width: 480px) {
   .genreSelection {
@@ -509,15 +532,15 @@ fieldset.hoursADay {
   header .wrapper h3 {
     font-size: 2rem; }
   header .wrapper h1 {
-    font-size: 7rem; } }
+    font-size: 7rem; }
+  h1 {
+    font-size: 2rem; } }
 
 @media (max-width: 414px) {
   .genreSelection .genreItem {
     width: 100%;
     height: 150px; }
-  header {
-    height: 70vh; }
-    header h1 {
-      padding-bottom: 30px; }
-    header h3 {
-      padding-bottom: 20px; } }
+  header h1 {
+    padding-bottom: 30px; }
+  header h3 {
+    padding-bottom: 20px; } }

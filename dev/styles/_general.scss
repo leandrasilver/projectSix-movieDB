@@ -5,13 +5,6 @@
 	margin:0 auto;
 }
 
-.flexParent {
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
-	flex-wrap:wrap;
-}
-
 h2 {
 	font-size: 3rem;
 	text-align: center;
@@ -32,9 +25,9 @@ input[type="radio"] {
 
 fieldset {
 	border:0;
-	padding-top:50px;
-	padding-bottom:50px;
-	background-color: rgba(224,249,249,0.5);
+	padding-top: 50px;
+	padding-bottom: 50px;
+  	background-color: rgba(224, 249, 249, 0.5); 
 }
 
 //Genre Selection Styles
@@ -175,7 +168,6 @@ fieldset {
 			text-align:center;
 			padding:10px;
 			z-index:1;
-			// border:2px solid lighten($slate, 50%);
 			border: 2px solid $turq;
 			background-color: rgba(255,255,255,0.5);
 			border-radius:5px;
@@ -198,7 +190,6 @@ fieldset {
 		box-shadow:1px 1px 5px rgba(28,0,64,0.3);
 		background-color: lighten($turq,35%);
 	}
-
 }
 
 .timeItem:hover, .timeItem:focus {
@@ -215,7 +206,7 @@ fieldset {
 
 // Styles for hours a day section 
 fieldset.hoursADay {
-	background-color:rgba(28,0,64,0.8);
+	background-color:rgb(28,0,64);
 }
 
 .hoursADay .wrapper {
@@ -223,7 +214,7 @@ fieldset.hoursADay {
 	justify-content: center;
 	align-items: center;
 	h2 {
-		text-align: left;
+		text-align: center;
 		margin-left:10px;
 		color:white;
 	}
@@ -243,7 +234,7 @@ fieldset.hoursADay {
 			border:2px solid $turq;
 			&:focus,&:active {
 				outline:none;
-				box-shadow:1px 1px 5px $turq;
+				box-shadow:1px 1px 5px $midnightBlue;
 			}
 		}
 	}
@@ -253,7 +244,7 @@ fieldset.hoursADay {
 	text-align: center;
 	input[type=submit] {
 		margin-top: 70px;
-		width: 20%;
+		min-width:100px;
 		height: 50px;
 		font-size: 1.5rem;
 		border-radius: 10px;
@@ -307,8 +298,6 @@ fieldset.hoursADay {
 	}
 }
 
-
-
 // Breakpoints
 
 @media (max-width: 940px) {
@@ -348,6 +337,27 @@ fieldset.hoursADay {
 			margin-top:10px;
 		}
 	}
+
+	.hoursADay .wrapper {
+		display: block;
+		h2 {
+			text-align: center;
+			margin-left:0;
+		}
+		div {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			width:100%;
+			margin-left:0;
+		}
+		input[type=number] {
+			margin-top:40px;
+		}
+	}
+	.results .wrapper .slider .tvShow {
+		width: 50%;
+	}
 }
 
 @media (max-width: 480px) {
@@ -382,6 +392,10 @@ header{
 			}
 		}
 	}
+
+	h1{
+		font-size: 2rem;
+	}
 }
 
 @media (max-width: 414px) {
@@ -392,7 +406,6 @@ header{
 		}
 	}
 	header{
-		height:70vh;
 		h1{
 			padding-bottom: 30px;
 		}

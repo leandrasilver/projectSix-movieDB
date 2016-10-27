@@ -1,9 +1,16 @@
-// Header Styles
+// Animations
+@keyframes bounce {
+	50% {
+		bottom:0px;
+	}
+}
 
+// Header Styles
 header {
 	font-family: $headerFont;
 	font-weight: 800;
-	height: 100vh;
+	height:100vh;
+	position:relative;
 	.wrapper {
 		height: 100%;
 		display: flex;
@@ -16,6 +23,7 @@ header {
 			font-family: 'Ultra', serif;
 			letter-spacing: 9px;
 			margin-bottom: 0;
+			text-align:center;
 			color: $midnightBlue;
 			font-weight: 400;
 		}
@@ -30,5 +38,16 @@ header {
 		img{
 			width:75%;
 		}
+		i {
+			font-size:50px;
+			padding:30px;
+			bottom:10px;
+			position:absolute;
+			transform:translateX(-50%);
+			color: $midnightBlue;
+			animation: 1s bounce infinite;
+			cursor:pointer;
+		}
 	}
 }
+
