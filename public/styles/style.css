@@ -335,13 +335,8 @@ fieldset {
   box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
   background-color: #edf8f9; }
 
-<<<<<<< HEAD
-.hoursADay {
-  background-color: rgba(28, 0, 64, 0.8); }
-=======
 fieldset.hoursADay {
   background-color: #1c0040; }
->>>>>>> fe2f4632d05f603bcd1060834097e668309b0190
 
 .hoursADay .wrapper {
   width: 100%;
@@ -462,7 +457,6 @@ fieldset.hoursADay {
         font-size: 4rem; }
   .timeSelection {
     -ms-flex-wrap: wrap;
-<<<<<<< HEAD
         flex-wrap: wrap;
     padding: 5px; }
     .timeSelection .timeItem {
@@ -473,24 +467,7 @@ fieldset.hoursADay {
   .hoursADay .wrapper {
     width: 80%; }
     .hoursADay .wrapper div {
-      width: 20%; } }
-
-@media (max-width: 480px) {
-  .genreSelection {
-    width: 100%; }
-  fieldset.daysBinge .timeItem {
-    width: 45%; }
-  h1 {
-    font-size: 2rem; }
-=======
-        flex-wrap: wrap; }
-  fieldset.daysBinge .timeItem {
-    width: 30%;
-    margin-bottom: 30px; }
-    fieldset.daysBinge .timeItem label p {
-      font-size: 1.4rem;
-      margin-top: 10px; }
->>>>>>> fe2f4632d05f603bcd1060834097e668309b0190
+      width: 20%; }
   .hoursADay .wrapper {
     display: block; }
     .hoursADay .wrapper h2 {
@@ -505,10 +482,6 @@ fieldset.hoursADay {
           align-items: center;
       width: 100%;
       margin-left: 0; }
-<<<<<<< HEAD
-      .hoursADay .wrapper div input[type=number] {
-        margin-top: 20px; } }
-=======
     .hoursADay .wrapper input[type=number] {
       margin-top: 40px; }
   .results .wrapper .slider .tvShow {
@@ -521,7 +494,6 @@ fieldset.hoursADay {
     width: 45%; }
   h1 {
     font-size: 2rem; } }
->>>>>>> fe2f4632d05f603bcd1060834097e668309b0190
 
 @media (max-width: 414px) {
   .genreSelection .genreItem {
@@ -554,14 +526,9 @@ header {
       font-family: "Ultra", serif;
       font-weight: 400;
       letter-spacing: 9px;
-<<<<<<< HEAD
-      color: #1c0040; }
-=======
       margin-bottom: 0;
       text-align: center;
-      color: #1c0040;
-      font-weight: 400; }
->>>>>>> fe2f4632d05f603bcd1060834097e668309b0190
+      color: #1c0040; }
     header .wrapper h3 {
       text-align: center;
       font-size: 3rem;
@@ -604,7 +571,6 @@ footer {
       line-height: 1.5rem; }
       footer .wrapper p a {
         text-decoration: none;
-<<<<<<< HEAD
         color: #1c0040; }
         footer .wrapper p a:hover {
           color: #4c618c; }
@@ -622,8 +588,3 @@ footer {
 @media (max-width: 414px) {
   footer .wrapper {
     width: 80%; } }
-=======
-        padding-bottom: 2px;
-        color: #4c618c;
-        border-bottom: 1px dotted #4c618c; }
->>>>>>> fe2f4632d05f603bcd1060834097e668309b0190
