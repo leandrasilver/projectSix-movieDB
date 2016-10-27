@@ -1,7 +1,7 @@
 footer { 
 	margin-top: 70px;
 	background: $lightGray;
-	color: $slate;
+	color: $midnightBlue;
 	padding: 50px;
 	.wrapper {
 		display: flex;
@@ -10,15 +10,45 @@ footer {
 		align-items: center;
 		p {
 			margin: 5px 0;
+			text-align: center;
 			font-size: 1.5rem;
-			letter-spacing: 1px;
 			font-family: $source;
+			letter-spacing: 1px;
+			line-height: 1.5rem;
 			a {
 				text-decoration: none;
-				padding-bottom: 2px;
-				color: $slate;
-				border-bottom: 1px dotted $slate;
+				color: $midnightBlue;
+				&:hover {
+					color: $slate;
+				}
 			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	footer {
+		.wrapper {
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	footer {
+		padding: 50px 20px;
+		.wrapper {
+			width: 60%;
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	footer {
+		.wrapper {
+			width: 80%;
 		}
 	}
 }
