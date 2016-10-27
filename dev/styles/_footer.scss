@@ -1,9 +1,24 @@
-footer .wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	p {
-		margin: 5px 0;
+footer { 
+	margin-top: 70px;
+	background: $lightGray;
+	color: $slate;
+	padding: 50px;
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			margin: 5px 0;
+			font-size: 1.5rem;
+			letter-spacing: 1px;
+			font-family: $source;
+			a {
+				text-decoration: none;
+				padding-bottom: 2px;
+				color: $slate;
+				border-bottom: 1px dotted $slate;
+			}
+		}
 	}
 }
