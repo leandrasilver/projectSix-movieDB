@@ -53,6 +53,7 @@ fieldset {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		border-radius: 10px;
 		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('https://unsplash.it/400/400');
 		background-position: center;
 		background-size: cover;
@@ -264,8 +265,28 @@ fieldset.hoursADay {
 // Results Section Styles
 
 .results {
-	img {
-		width: 500px;
+	text-align: center;
+	font-family: $bodyFont;
+	.wrapper {
+		width: 100%;
+		article {
+			width: 33%;
+			display: flex;
+			flex-direction: column;
+		}
+		h3 {
+			margin: 5px 0;
+			font-family: $headerFont;
+			font-size: 2.3rem;
+		}
+		p {
+			margin: 5px 0;
+			font-size: 1.5rem;
+		}
+		img {
+			width: 100%;
+			border-radius: 7px;
+		}
 	}
 }
 
