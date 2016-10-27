@@ -133,27 +133,36 @@ fieldset {
 	}
 }
 
-
 // Styles for potato section days Binge
 
 .daysBinge {
-	// background-color:lighten($slate, 45%);
 	background-color: #FFF;
-	padding:150px 0px;
-	h3{
-		color:$turq;
-	}
-	.timeSelection {
-		display:flex;
-		justify-content:space-between;
-		// So the potatos are always aligned
-		align-items:baseline;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h2 {
+			margin-bottom: 10px;
+		}
+		h3 {
+			color:$turq;
+			margin: 10px 0;
+		}
+		.timeSelection {
+			display:flex;
+			justify-content:space-between;
+			// align-items:baseline;
+		}
 	}
 }
 
 .timeItem {
 	width: 13%;
-	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -163,14 +172,22 @@ fieldset {
 		justify-content: center;
 		align-items: center;
 		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 60px;
 			margin: 30px 0 0 0;
-			font-family: $bodyFont;
+			font-family: $abhaya;
+			letter-spacing: 1px;
 			text-align:center;
 			padding:10px;
 			z-index:1;
 			border: 2px solid $turq;
 			background-color: rgba(255,255,255,0.5);
 			border-radius:5px;
+			font-size: 1.6rem;
+			color: $midnightBlue;
 		}
 		.potatoImg {
 			width: 100%;
@@ -181,11 +198,7 @@ fieldset {
 			cursor: pointer;
 		}
 	}
-	input[type=radio]:checked + label img {
-		transform: scale(1.2);
-	}
 	input[type=radio]:checked + label p {
-		transform:scale(1.1);
 		border:2px solid rgba(28,0,64,0.8);
 		box-shadow:1px 1px 5px rgba(28,0,64,0.3);
 		background-color: lighten($turq,35%);
@@ -193,11 +206,7 @@ fieldset {
 }
 
 .timeItem:hover, .timeItem:focus {
-	label img {
-		transform: scale(1.2);
-	}
 	label p {
-		transform:scale(1.1);
 		border:2px solid rgba(28,0,64,0.8);
 		box-shadow:1px 1px 5px rgba(28,0,64,0.3);
 		background-color: lighten($turq,35%);
@@ -210,6 +219,7 @@ fieldset.hoursADay {
 }
 
 .hoursADay .wrapper {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -217,16 +227,16 @@ fieldset.hoursADay {
 		text-align: center;
 		margin-left:10px;
 		color:white;
+		font-size: 2.5rem;
 	}
 	div {
-		width:100px;
+		width: 10%;
 		margin-left:20px;
 		display:flex;
 		justify-content:center;
 		align-items:center;
 		input[type=number] {
-			padding-left:10px;
-			width: 70px;
+			width: 100%;
 			color:$darkSlate;
 			height: 35px;
 			font-size: 2rem;
@@ -240,18 +250,26 @@ fieldset.hoursADay {
 	}
 }
 
+.submitField {
+	background: none;
+	padding: 0;
+}
+
 .submitWrap {
 	text-align: center;
+	width: 100%;
 	input[type=submit] {
 		margin-top: 70px;
 		min-width:100px;
 		height: 50px;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		border-radius: 10px;
 		border: 2px solid $turq;
 		color: $turq;
 		background: none;
-		&:hover,&:active  {
+		font-family: $abhaya;
+		font-weight: 600;
+		&:hover, &:active  {
 			background: $turq;
 			color: white;
 		}
@@ -312,6 +330,45 @@ fieldset.hoursADay {
 	}
 }
 
+@media (min-width: 940px) {
+	.daysBinge {
+		height: 100vh;
+	}
+	.timeItem:hover, .timeItem:focus {
+		img, p {
+			transform: scale(1.12);
+		}
+	}
+	.timeItem {
+		input[type=radio]:checked + label img {
+			transform: scale(1.12);
+		}
+		input[type=radio]:checked + label p {
+			transform:scale(1.12);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.timeItem {
+		label {
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.hoursADay .wrapper {
+		h2 {
+			font-size: 2.1rem;
+		}
+		div {
+			input[type=number] {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
 @media (max-width: 640px) {
 	.genreSelection {
 		width: 90%;
@@ -324,17 +381,23 @@ fieldset.hoursADay {
 			}
 		}
 	}
-
 	.timeSelection {
 		flex-wrap:wrap;
+		padding: 5px;
+		.timeItem {
+			width: 27%;
+			margin-top: 20px;
+			label {
+				p {
+					margin-top: 10px;
+				}
+			}
+		}
 	}
-
-	fieldset.daysBinge .timeItem {
-		width:30%;
-		margin-bottom:30px;
-		label p {
-			font-size:1.4rem;
-			margin-top:10px;
+	.hoursADay .wrapper {
+		width: 80%;
+		div {
+			width: 20%;
 		}
 	}
 
@@ -392,7 +455,6 @@ header{
 			}
 		}
 	}
-
 	h1{
 		font-size: 2rem;
 	}
