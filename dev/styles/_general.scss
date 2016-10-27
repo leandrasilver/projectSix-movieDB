@@ -234,9 +234,10 @@ fieldset {
 		text-align: left;
 		margin-left:10px;
 		color:white;
+		font-size: 2.5rem;
 	}
 	div {
-		width: 50%;
+		width: 10%;
 		margin-left:20px;
 		display:flex;
 		justify-content:center;
@@ -256,8 +257,14 @@ fieldset {
 	}
 }
 
+.submitField {
+	background: none;
+	padding: 0;
+}
+
 .submitWrap {
 	text-align: center;
+	width: 100%;
 	input[type=submit] {
 		margin-top: 70px;
 		width: 20%;
@@ -269,7 +276,7 @@ fieldset {
 		background: none;
 		font-family: $abhaya;
 		font-weight: 600;
-		&:hover,&:active  {
+		&:hover, &:active  {
 			background: $turq;
 			color: white;
 		}
@@ -334,17 +341,17 @@ fieldset {
 	.daysBinge {
 		height: 100vh;
 	}
+	.timeItem:hover, .timeItem:focus {
+		img, p {
+			transform: scale(1.12);
+		}
+	}
 	.timeItem {
 		input[type=radio]:checked + label img {
-			transform: scale(1.2);
+			transform: scale(1.12);
 		}
 		input[type=radio]:checked + label p {
-			transform:scale(1.1);
-		}
-		label {
-			img, p {
-				transform: scale(1.2);
-			}
+			transform:scale(1.12);
 		}
 	}
 }
@@ -354,6 +361,16 @@ fieldset {
 		label {
 			p {
 				font-size: 1.4rem;
+			}
+		}
+	}
+	.hoursADay .wrapper {
+		h2 {
+			font-size: 2.1rem;
+		}
+		div {
+			input[type=number] {
+				font-size: 1.5rem;
 			}
 		}
 	}
@@ -384,17 +401,22 @@ fieldset {
 			}
 		}
 	}
+	.hoursADay .wrapper {
+		width: 80%;
+		div {
+			width: 20%;
+		}
+	}
 }
 
 @media (max-width: 480px) {
 	.genreSelection {
 		width: 100%;
 	}
-	
 	fieldset.daysBinge .timeItem {
 		width:45%;
 	}
-	h1{
+	h1 {
 		font-size: 2rem;
 	}
 	.hoursADay .wrapper {
@@ -409,6 +431,9 @@ fieldset {
 			align-items:center;
 			width:100%;
 			margin-left:0;
+			input[type=number] {
+				margin-top: 20px;
+			}
 		}
 	}
 }

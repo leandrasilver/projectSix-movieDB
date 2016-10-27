@@ -359,9 +359,10 @@ fieldset {
   .hoursADay .wrapper h2 {
     text-align: left;
     margin-left: 10px;
-    color: white; }
+    color: white;
+    font-size: 2.5rem; }
   .hoursADay .wrapper div {
-    width: 50%;
+    width: 10%;
     margin-left: 20px;
     display: -ms-flexbox;
     display: flex;
@@ -380,8 +381,13 @@ fieldset {
         outline: none;
         box-shadow: 1px 1px 5px #68c2cc; }
 
+.submitField {
+  background: none;
+  padding: 0; }
+
 .submitWrap {
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .submitWrap input[type=submit] {
     margin-top: 70px;
     width: 20%;
@@ -437,16 +443,20 @@ fieldset {
 @media (min-width: 940px) {
   .daysBinge {
     height: 100vh; }
+  .timeItem:hover img, .timeItem:hover p, .timeItem:focus img, .timeItem:focus p {
+    transform: scale(1.12); }
   .timeItem input[type=radio]:checked + label img {
-    transform: scale(1.2); }
+    transform: scale(1.12); }
   .timeItem input[type=radio]:checked + label p {
-    transform: scale(1.1); }
-  .timeItem label img, .timeItem label p {
-    transform: scale(1.2); } }
+    transform: scale(1.12); } }
 
 @media (max-width: 768px) {
   .timeItem label p {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  .hoursADay .wrapper h2 {
+    font-size: 2.1rem; }
+  .hoursADay .wrapper div input[type=number] {
+    font-size: 1.5rem; } }
 
 @media (max-width: 640px) {
   .genreSelection {
@@ -463,7 +473,11 @@ fieldset {
       width: 27%;
       margin-top: 20px; }
       .timeSelection .timeItem label p {
-        margin-top: 10px; } }
+        margin-top: 10px; }
+  .hoursADay .wrapper {
+    width: 80%; }
+    .hoursADay .wrapper div {
+      width: 20%; } }
 
 @media (max-width: 480px) {
   .genreSelection {
@@ -485,7 +499,9 @@ fieldset {
       -ms-flex-align: center;
           align-items: center;
       width: 100%;
-      margin-left: 0; } }
+      margin-left: 0; }
+      .hoursADay .wrapper div input[type=number] {
+        margin-top: 20px; } }
 
 @media (max-width: 414px) {
   .genreSelection .genreItem {
@@ -507,13 +523,13 @@ header {
     -ms-flex-align: center;
         align-items: center; }
     header .wrapper h1 {
+      margin-bottom: 0;
       text-align: center;
       font-size: 10rem;
-      font-family: 'Ultra', serif;
+      font-family: "Ultra", serif;
+      font-weight: 400;
       letter-spacing: 9px;
-      margin-bottom: 0;
-      color: #1c0040;
-      font-weight: 400; }
+      color: #1c0040; }
     header .wrapper h3 {
       text-align: center;
       font-size: 3rem;
@@ -540,13 +556,27 @@ footer {
         align-items: center; }
     footer .wrapper p {
       margin: 5px 0;
+      text-align: center;
       font-size: 1.5rem;
+      font-family: "Source Sans Pro", sans-serif;
       letter-spacing: 1px;
-      font-family: "Source Sans Pro", sans-serif; }
+      line-height: 1.5rem; }
       footer .wrapper p a {
         text-decoration: none;
         color: #1c0040; }
-        padding-bottom: 2px;
-        color: #4c618c;
-        border-bottom: 1px dotted #4c618c; }
+        footer .wrapper p a:hover {
+          color: #4c618c; }
 
+@media (max-width: 768px) {
+  footer .wrapper p {
+    font-size: 1.2rem; } }
+
+@media (max-width: 650px) {
+  footer {
+    padding: 50px 20px; }
+    footer .wrapper {
+      width: 60%; } }
+
+@media (max-width: 414px) {
+  footer .wrapper {
+    width: 80%; } }

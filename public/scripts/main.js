@@ -121,13 +121,7 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 			});
 
 			$tvShowContainer.append($resultsImage, $seasonsNum, $resultsVoteAvg);
-<<<<<<< HEAD
-
-			$('.bxslider').append($tvShowContainer);
-			$('.results').css('display', 'block');
-=======
 			$('.slider').append($tvShowContainer);
->>>>>>> 3c1f71d0c40fa0f213cfd2d3f5d60dbbdf95f0c3
 		}
 	}
 }; //end couchPotatoApp.filterTv

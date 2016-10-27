@@ -11,13 +11,13 @@ header {
 		justify-content: flex-start;
 		align-items: center;
 		h1 {
+			margin-bottom: 0;
 			text-align: center;
 			font-size: 10rem;
-			font-family: 'Ultra', serif;
-			letter-spacing: 9px;
-			margin-bottom: 0;
-			color: $midnightBlue;
+			font-family: $ultra;
 			font-weight: 400;
+			letter-spacing: 9px;
+			color: $midnightBlue;
 		}
 		h3 {
 			text-align: center;
