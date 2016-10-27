@@ -160,7 +160,7 @@ h2 {
   font-size: 3rem;
   text-align: center;
   font-family: "BioRhyme", serif;
-  color: #1c0040; }
+  color: #3B4C7B; }
 
 h3 {
   font-size: 2rem;
@@ -174,7 +174,11 @@ input[type="radio"] {
 fieldset {
   border: 0;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background-color: rgba(224, 249, 249, 0.5); }
+
+.genres h2 {
+  margin: 40px 0; }
 
 .genreSelection {
   display: -ms-flexbox;
@@ -260,7 +264,9 @@ fieldset {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/western-min.png"); }
 
 .daysBinge {
-  background-color: #d5dbe8; }
+  background-color: #FFF; }
+  .daysBinge h3 {
+    color: #68c2cc; }
   .daysBinge .timeSelection {
     display: -ms-flexbox;
     display: flex;
@@ -289,12 +295,11 @@ fieldset {
         align-items: center; }
     .timeItem label p {
       margin: 30px 0 0 0;
-      font-size: 1.6rem;
       font-family: "BioRhyme", serif;
       text-align: center;
       padding: 10px;
       z-index: 1;
-      border: 2px solid #e6eaf1;
+      border: 2px solid #68c2cc;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 5px; }
     .timeItem label .potatoImg {
@@ -358,11 +363,12 @@ fieldset.hoursADay {
 .submitWrap {
   text-align: center; }
   .submitWrap input[type=submit] {
+    margin-top: 70px;
     width: 20%;
     height: 50px;
     font-size: 1.5rem;
     border-radius: 10px;
-    border: 1px solid #68c2cc;
+    border: 2px solid #68c2cc;
     color: #68c2cc;
     background: none; }
     .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:active {
@@ -375,20 +381,29 @@ fieldset.hoursADay {
       box-shadow: 1px 1px 5px #68c2cc; }
 
 .results {
+  opacity: 0;
+  margin-top: 70px;
   text-align: center;
   font-family: "BioRhyme", serif; }
   .results .wrapper {
-    width: 100%; }
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .results .wrapper article {
-      width: 33%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+      width: calc(33% - 10px);
+      margin: 0 5px; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
-      font-size: 2.3rem; }
+      font-size: 2rem; }
     .results .wrapper p {
       margin: 5px 0;
       font-size: 1.5rem; }
@@ -449,9 +464,10 @@ fieldset.hoursADay {
 
 header {
   font-family: "BioRhyme", serif;
-  font-weight: 800; }
+  font-weight: 800;
+  height: 100vh; }
   header .wrapper {
-    height: 100vh;
+    height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;

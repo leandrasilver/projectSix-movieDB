@@ -33,6 +33,8 @@ couchPotatoApp.getInfo = function() {
 		}).then(function(data) {
 			couchPotatoApp.getTVInfo(data);
 		});
+
+		$('.results').css('opacity', '1')
 	});		
 }; //end getinfo
 

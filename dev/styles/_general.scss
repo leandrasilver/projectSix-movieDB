@@ -16,7 +16,7 @@ h2 {
 	font-size: 3rem;
 	text-align: center;
 	font-family: $headerFont;
-	color: $midnightBlue;
+	color: #3B4C7B;
 }
 
 h3 {
@@ -34,9 +34,14 @@ fieldset {
 	border:0;
 	padding-top:50px;
 	padding-bottom:50px;
+	background-color: rgba(224,249,249,0.5);
 }
 
 //Genre Selection Styles
+
+.genres h2 {
+	margin: 40px 0;
+}
 
 .genreSelection {
 	display: flex;
@@ -139,7 +144,11 @@ fieldset {
 // Styles for potato section days Binge
 
 .daysBinge {
-	background-color:lighten($slate, 45%);
+	// background-color:lighten($slate, 45%);
+	background-color: #FFF;
+	h3{
+		color:$turq;
+	}
 	.timeSelection {
 		display:flex;
 		justify-content:space-between;
@@ -161,12 +170,12 @@ fieldset {
 		align-items: center;
 		p {
 			margin: 30px 0 0 0;
-			font-size: 1.6rem;
 			font-family: $bodyFont;
 			text-align:center;
 			padding:10px;
 			z-index:1;
-			border:2px solid lighten($slate, 50%);
+			// border:2px solid lighten($slate, 50%);
+			border: 2px solid $turq;
 			background-color: rgba(255,255,255,0.5);
 			border-radius:5px;
 		}
@@ -242,11 +251,12 @@ fieldset.hoursADay {
 .submitWrap {
 	text-align: center;
 	input[type=submit] {
+		margin-top: 70px;
 		width: 20%;
 		height: 50px;
 		font-size: 1.5rem;
 		border-radius: 10px;
-		border: 1px solid $turq;
+		border: 2px solid $turq;
 		color: $turq;
 		background: none;
 		&:hover,&:active  {
@@ -265,19 +275,25 @@ fieldset.hoursADay {
 // Results Section Styles
 
 .results {
+	opacity: 0;
+	margin-top: 70px;
 	text-align: center;
 	font-family: $bodyFont;
 	.wrapper {
 		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 		article {
-			width: 33%;
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			width: calc(33% - 10px);
+			margin: 0 5px;
 		}
 		h3 {
 			margin: 5px 0;
 			font-family: $headerFont;
-			font-size: 2.3rem;
+			font-size: 2rem;
 		}
 		p {
 			margin: 5px 0;
