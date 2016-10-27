@@ -268,7 +268,7 @@ input[type="radio"] {
         align-items: center; }
     .timeItem label p {
       margin: 30px 0 0 0;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-family: "BioRhyme", serif;
       color: #4c618c; }
     .timeItem label .potatoImg {
@@ -341,7 +341,13 @@ input[type="radio"] {
     .genreSelection .genreItem {
       width: 45%;
       height: 200px;
-      margin: 5px; } }
+      margin: 5px; }
+  .timeSelection.flexParent .timeItem {
+    width: 27%; }
+    .timeSelection.flexParent .timeItem label p {
+      margin-top: 5px; }
+    .timeSelection.flexParent .timeItem label .potatoImg {
+      width: 70%; } }
 
 @media (max-width: 640px) {
   .genreSelection {
