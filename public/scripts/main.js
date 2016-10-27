@@ -35,6 +35,8 @@ couchPotatoApp.getInfo = function () {
 		}).then(function (data) {
 			couchPotatoApp.getTVInfo(data);
 		});
+
+		$('.results').css('opacity', '1');
 	});
 }; //end getinfo
 
@@ -80,7 +82,6 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
-		var $tvOverview = $('<p>').text(tvIDsResultsData.overview);
 
 		$tvShowContainer.append($resultsImage, $tvTitle, $seasonsNum, $resultsVoteAvg);
 
