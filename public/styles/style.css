@@ -128,6 +128,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+html {
+  font-size: 10px; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .flexParent {
   display: -ms-flexbox;
   display: flex;
@@ -138,17 +146,202 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Abhaya Libre", serif;
+  color: #1c0040; }
+
+input[type="radio"] {
+  display: none; }
+
+.genreSelection {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif; }
+  .genreSelection .genreItem {
+    width: calc(25% - 10px);
+    height: 265px;
+    margin: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://unsplash.it/400/400");
+    background-position: center;
+    background-size: cover;
+    color: white; }
+    .genreSelection .genreItem input[type=radio]:checked + label {
+      color: #68c2cc; }
+    .genreSelection .genreItem label {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      .genreSelection .genreItem label i {
+        font-size: 8rem;
+        margin-bottom: 20px; }
+      .genreSelection .genreItem label:hover, .genreSelection .genreItem label:focus, .genreSelection .genreItem label:active {
+        color: #68c2cc;
+        cursor: pointer; }
+  .genreSelection .genreNoMargL {
+    margin-left: 0; }
+  .genreSelection .genreNoMargR {
+    margin-right: 0; }
+  .genreSelection .genreAction {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/action-min.png"); }
+  .genreSelection .genreAnimation {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/animation-min.png"); }
+  .genreSelection .genreComedy {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/comedy-min.png"); }
+  .genreSelection .genreCrime {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/crime-min.png"); }
+  .genreSelection .genreDoc {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/documentary-min.png"); }
+  .genreSelection .genreDrama {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/drama-min.png"); }
+  .genreSelection .genreFamily {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/family-min.png"); }
+  .genreSelection .genreKids {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/kids-min.png"); }
+  .genreSelection .genreMystery {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/mystery-min.png"); }
+  .genreSelection .genreNews {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/news-min.png"); }
+  .genreSelection .genreReality {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/reality-min.png"); }
+  .genreSelection .genreScifi {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/scifi-min.png"); }
+  .genreSelection .genreSoap {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/soap-min.png"); }
+  .genreSelection .genreTalk {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/talk-min.png"); }
+  .genreSelection .genreWar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/war-min.png"); }
+  .genreSelection .genreWestern {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/western-min.png"); }
+
 .timeItem {
-  -ms-flex-preferred-size: 16%;
-      flex-basis: 16%; }
+  width: 16%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .timeItem label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .timeItem label p {
+      font-size: 2rem; }
+    .timeItem label .potatoImg {
+      width: 100%; }
+    .timeItem label:hover, .timeItem label:focus, .timeItem label:active {
+      cursor: pointer; }
 
-.wrapper {
-  width: 80%;
-  max-width: 1100px;
-  margin: 0 auto; }
+.hoursADay .wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+  .hoursADay .wrapper h2 {
+    text-align: left; }
+  .hoursADay .wrapper div {
+    width: 30%; }
+    .hoursADay .wrapper div input[type=number] {
+      width: 100%;
+      height: 35px;
+      font-size: 1.7rem; }
 
-img {
+input[type=submit] {
+  width: 20%;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #68c2cc;
+  color: #68c2cc;
+  background: none; }
+  input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+    background: #68c2cc;
+    color: white; }
+
+.results img {
   width: 500px; }
 
-img.potatoImg {
-  width: 100px; }
+@media (max-width: 940px) {
+  .genreSelection {
+    width: 80%;
+    margin: 0 auto; }
+    .genreSelection .genreItem {
+      width: 45%;
+      height: 200px;
+      margin: 5px; } }
+
+@media (max-width: 640px) {
+  .genreSelection {
+    width: 90%; }
+    .genreSelection .genreItem label {
+      font-size: 2rem; }
+      .genreSelection .genreItem label i {
+        font-size: 4rem; } }
+
+@media (max-width: 480px) {
+  .genreSelection {
+    width: 100%; } }
+
+@media (max-width: 414px) {
+  .genreSelection .genreItem {
+    width: 100%;
+    height: 150px; } }
+
+header {
+  font-family: "Abhaya Libre", serif;
+  height: 100vh; }
+  header .wrapper {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    header .wrapper h1 {
+      font-size: 6rem; }
+    header .wrapper h3 {
+      font-size: 3.5rem; }
+
+footer .wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  footer .wrapper p {
+    margin: 5px 0; }

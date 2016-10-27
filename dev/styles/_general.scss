@@ -1,4 +1,10 @@
 // General Styles
+.wrapper {
+	width: 100%;
+	max-width:1100px;
+	margin:0 auto;
+}
+
 .flexParent {
 	display: flex;
 	justify-content:space-between;
@@ -6,24 +12,210 @@
 	flex-wrap:wrap;
 }
 
-// input[type="radio"] {
-// 	display:none;
-// }
+h2 {
+	font-size: 3rem;
+	text-align: center;
+	font-family: $headerFont;
+	color: $midnightBlue;
+}
+
+input[type="radio"] {
+	display:none;
+}
+
+//Genre Selection Styles
+
+.genreSelection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-family: $bodyFont;
+	.genreItem {
+		width: calc(25% - 10px);
+		height: 265px;
+		margin: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('https://unsplash.it/400/400');
+		background-position: center;
+		background-size: cover;
+		color: white;
+		input[type=radio]:checked + label {
+			color: $turq;
+		}
+		label {
+			display: flex;
+			flex-direction: column;
+			font-size: 2rem;
+			letter-spacing: 1px;
+			justify-content: space-between;
+			i {
+				font-size: 8rem;
+				margin-bottom: 20px;
+			}
+			&:hover, &:focus, &:active {
+				color: $turq;
+				cursor: pointer;
+			}
+		}
+	}
+	.genreNoMargL {
+		margin-left: 0;
+	}
+	.genreNoMargR {
+		margin-right: 0;
+	}
+	.genreAction {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/action-min.png');				
+	}
+	.genreAnimation {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/animation-min.png');					
+	}
+	.genreComedy {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/comedy-min.png');				
+	}
+	.genreCrime {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/crime-min.png');				
+	}
+	.genreDoc {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/documentary-min.png');				
+	}
+	.genreDrama {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/drama-min.png');		
+	}
+	.genreFamily {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/family-min.png');				
+	}
+	.genreKids {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/kids-min.png');
+	}
+	.genreMystery {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/mystery-min.png');		
+	}
+	.genreNews {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/news-min.png');
+	}
+	.genreReality {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/reality-min.png');
+	}
+	.genreScifi {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/scifi-min.png');
+	}
+	.genreSoap {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/soap-min.png');				
+	}
+	.genreTalk {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/talk-min.png');				
+	}
+	.genreWar {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/war-min.png');				
+	}
+	.genreWestern {
+		background-image: linear-gradient($backgroundBlack, $backgroundBlack), url('../../images/genres/western-min.png');				
+	}
+}
 
 .timeItem {
-	flex-basis:16%;
+	width: 16%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	label {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			font-size: 2rem;
+		}
+		.potatoImg {
+			width: 100%;
+		}
+		&:hover, &:focus, &:active {
+			cursor: pointer;
+		}
+	}
 }
 
-.wrapper {
-	width:80%;
-	max-width:1100px;
-	margin:0 auto;
+.hoursADay .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	h2 {
+		text-align: left;
+	}
+	div {
+		width: 30%;
+		input[type=number] {
+			width: 100%;
+			height: 35px;
+			font-size: 1.7rem;
+		}
+	}
 }
 
-img {
-	width: 500px;
+input[type=submit] {
+	width: 20%;
+	height: 50px;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	border: 1px solid $turq;
+	color: $turq;
+	background: none;
+	&:hover, &:focus, &:active {
+		background: $turq;
+		color: white;
+	}
 }
 
-img.potatoImg {
-	width:100px;
+.results {
+	img {
+		width: 500px;
+	}
 }
+
+@media (max-width: 940px) {
+	.genreSelection {
+		width: 80%;
+		margin: 0 auto;
+		.genreItem {
+			width: 45%;
+			height: 200px;
+			margin: 5px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.genreSelection {
+		width: 90%;
+		.genreItem {
+			label {
+				font-size: 2rem;
+				i {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.genreSelection {
+		width: 100%;
+	}
+}
+
+@media (max-width: 414px) {
+	.genreSelection {
+		.genreItem {
+			width: 100%;
+			height: 150px;
+		}
+	}
+}
+
