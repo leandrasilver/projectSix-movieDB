@@ -16,7 +16,7 @@ h2 {
 	font-size: 3rem;
 	text-align: center;
 	font-family: $headerFont;
-	color: $midnightBlue;
+	color: #3B4C7B;
 }
 
 h3 {
@@ -34,6 +34,7 @@ fieldset {
 	border:0;
 	padding-top:50px;
 	padding-bottom:50px;
+	background-color: rgba(224,249,249,0.5);
 }
 
 //Genre Selection Styles
@@ -143,7 +144,12 @@ fieldset {
 // Styles for potato section days Binge
 
 .daysBinge {
-	background-color:lighten($slate, 45%);
+	// background-color:lighten($slate, 45%);
+	background-color: #FFF;
+	padding:150px 0px;
+	h3{
+		color:$turq;
+	}
 	.timeSelection {
 		display:flex;
 		justify-content:space-between;
@@ -169,7 +175,8 @@ fieldset {
 			text-align:center;
 			padding:10px;
 			z-index:1;
-			border:2px solid lighten($slate, 50%);
+			// border:2px solid lighten($slate, 50%);
+			border: 2px solid $turq;
 			background-color: rgba(255,255,255,0.5);
 			border-radius:5px;
 		}

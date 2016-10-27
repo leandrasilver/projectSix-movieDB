@@ -4,7 +4,7 @@ header {
 	font-family: $headerFont;
 	font-weight: 800;
 	height: 100vh;
-	// background-color: rgba(28,0,64,0.1);
+	// background-color: #E4E4E4;
 	.wrapper {
 		height: 100%;
 		display: flex;
@@ -12,12 +12,12 @@ header {
 		justify-content: flex-start;
 		align-items: center;
 		h1 {
-			font-size: 8rem;
-			// font-family: 'Shadows Into Light', cursive;
+			font-size: 10rem;
 			font-family: 'Ultra', serif;
-			letter-spacing: 10px;
+			letter-spacing: 9px;
 			margin-bottom: 0;
 			color: $midnightBlue;
+			font-weight: 400;
 		}
 		h3 {
 			text-align: center;

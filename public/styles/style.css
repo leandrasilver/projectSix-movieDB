@@ -160,7 +160,7 @@ h2 {
   font-size: 3rem;
   text-align: center;
   font-family: "BioRhyme", serif;
-  color: #1c0040; }
+  color: #3B4C7B; }
 
 h3 {
   font-size: 2rem;
@@ -174,7 +174,8 @@ input[type="radio"] {
 fieldset {
   border: 0;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background-color: rgba(224, 249, 249, 0.5); }
 
 .genres h2 {
   margin: 40px 0; }
@@ -263,7 +264,10 @@ fieldset {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../images/genres/western-min.png"); }
 
 .daysBinge {
-  background-color: #d5dbe8; }
+  background-color: #FFF;
+  padding: 150px 0px; }
+  .daysBinge h3 {
+    color: #68c2cc; }
   .daysBinge .timeSelection {
     display: -ms-flexbox;
     display: flex;
@@ -296,7 +300,7 @@ fieldset {
       text-align: center;
       padding: 10px;
       z-index: 1;
-      border: 2px solid #e6eaf1;
+      border: 2px solid #68c2cc;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 5px; }
     .timeItem label .potatoImg {
@@ -471,11 +475,12 @@ header {
     -ms-flex-align: center;
         align-items: center; }
     header .wrapper h1 {
-      font-size: 8rem;
+      font-size: 10rem;
       font-family: 'Ultra', serif;
-      letter-spacing: 10px;
+      letter-spacing: 9px;
       margin-bottom: 0;
-      color: #1c0040; }
+      color: #1c0040;
+      font-weight: 400; }
     header .wrapper h3 {
       text-align: center;
       font-size: 3rem;
