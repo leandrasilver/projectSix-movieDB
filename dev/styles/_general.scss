@@ -5,13 +5,6 @@
 	margin:0 auto;
 }
 
-.flexParent {
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
-	flex-wrap:wrap;
-}
-
 h2 {
 	font-size: 3rem;
 	text-align: center;
@@ -32,9 +25,9 @@ input[type="radio"] {
 
 fieldset {
 	border:0;
-	padding-top:50px;
-	padding-bottom:50px;
-	background-color: rgba(224,249,249,0.5);
+	padding-top: 50px;
+	padding-bottom: 50px;
+  	background-color: rgba(224, 249, 249, 0.5); 
 }
 
 //Genre Selection Styles
@@ -221,8 +214,8 @@ fieldset {
 }
 
 // Styles for hours a day section 
-.hoursADay {
-	background-color:rgba(28,0,64,0.8);
+fieldset.hoursADay {
+	background-color:rgb(28,0,64);
 }
 
 .hoursADay .wrapper {
@@ -231,7 +224,7 @@ fieldset {
 	justify-content: center;
 	align-items: center;
 	h2 {
-		text-align: left;
+		text-align: center;
 		margin-left:10px;
 		color:white;
 		font-size: 2.5rem;
@@ -251,7 +244,7 @@ fieldset {
 			border:2px solid $turq;
 			&:focus,&:active {
 				outline:none;
-				box-shadow:1px 1px 5px $turq;
+				box-shadow:1px 1px 5px $midnightBlue;
 			}
 		}
 	}
@@ -267,7 +260,7 @@ fieldset {
 	width: 100%;
 	input[type=submit] {
 		margin-top: 70px;
-		width: 20%;
+		min-width:100px;
 		height: 50px;
 		font-size: 2rem;
 		border-radius: 10px;
@@ -407,18 +400,7 @@ fieldset {
 			width: 20%;
 		}
 	}
-}
 
-@media (max-width: 480px) {
-	.genreSelection {
-		width: 100%;
-	}
-	fieldset.daysBinge .timeItem {
-		width:45%;
-	}
-	h1 {
-		font-size: 2rem;
-	}
 	.hoursADay .wrapper {
 		display: block;
 		h2 {
@@ -431,10 +413,25 @@ fieldset {
 			align-items:center;
 			width:100%;
 			margin-left:0;
-			input[type=number] {
-				margin-top: 20px;
-			}
 		}
+		input[type=number] {
+			margin-top:40px;
+		}
+	}
+	.results .wrapper .slider .tvShow {
+		width: 50%;
+	}
+}
+
+@media (max-width: 480px) {
+	.genreSelection {
+		width: 100%;
+	}
+	fieldset.daysBinge .timeItem {
+		width:45%;
+	}
+	h1{
+		font-size: 2rem;
 	}
 }
 
