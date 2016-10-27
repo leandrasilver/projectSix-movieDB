@@ -75,17 +75,32 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		console.log(tvIDsResultsData);
 
 		//TV Shows Results Container
-		var $tvShowContainer = $('<article>').addClass('tvShow');
+		var $tvShowContainer = $('<li>').addClass('tvShow');
 
 		// Tv data property variables to append to result section
-		var $tvTitle = $('<h3>').text(tvIDsResultsData.name);
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
-		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
 
-		$tvShowContainer.append($resultsImage, $tvTitle, $seasonsNum, $resultsVoteAvg);
+		if (tvIDsResultsData.poster_path !== null) {
+			var $resultsImage = $('<img>').attr({
+				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
+				alt: tvIDsResultsData.name,
+				title: tvIDsResultsData.name
+			});
 
-		$('.results .wrapper').append($tvShowContainer);
+			$tvShowContainer.append($resultsImage, $seasonsNum, $resultsVoteAvg);
+
+			$('.bxslider').append($tvShowContainer);
+			$('.results').css('display', 'block');
+
+			$('.bxslider').bxSlider({
+				minSlides: 3,
+				maxSlides: 3,
+				slideWidth: 1100,
+				slideMargin: 10,
+				preloadImages: 'all'
+			});
+		}
 	}
 }; //end couchPotatoApp.filterTv
 
