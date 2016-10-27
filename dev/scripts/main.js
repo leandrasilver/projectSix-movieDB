@@ -90,14 +90,6 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 
 			$('.bxslider').append($tvShowContainer);
 			$('.results').css('display', 'block');
-
-			$('.bxslider').bxSlider({
-				minSlides: 3,
-				maxSlides: 3,
-				slideWidth: 1100,
-				slideMargin: 10,
-				preloadImages: 'all',
-			});
 		}
 	}
 } //end couchPotatoApp.filterTv

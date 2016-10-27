@@ -265,20 +265,35 @@ fieldset {
 
 .daysBinge {
   background-color: #FFF;
-  padding: 150px 0px; }
-  .daysBinge h3 {
-    color: #68c2cc; }
-  .daysBinge .timeSelection {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .daysBinge .wrapper {
+    height: 100%;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: baseline;
-        align-items: baseline; }
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .daysBinge .wrapper h2 {
+      margin-bottom: 10px; }
+    .daysBinge .wrapper h3 {
+      color: #68c2cc;
+      margin: 10px 0; }
+    .daysBinge .wrapper .timeSelection {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .timeItem {
   width: 13%;
-  margin-bottom: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -295,41 +310,46 @@ fieldset {
     -ms-flex-align: center;
         align-items: center; }
     .timeItem label p {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      width: 100%;
+      height: 60px;
       margin: 30px 0 0 0;
-      font-family: "BioRhyme", serif;
+      font-family: "Abhaya Libre", serif;
+      letter-spacing: 1px;
       text-align: center;
       padding: 10px;
       z-index: 1;
       border: 2px solid #68c2cc;
       background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 5px; }
+      border-radius: 5px;
+      font-size: 1.6rem;
+      color: #1c0040; }
     .timeItem label .potatoImg {
       width: 100%;
       transition: transform 0.3s ease;
       z-index: 2; }
     .timeItem label:hover, .timeItem label:focus, .timeItem label:active {
       cursor: pointer; }
-  .timeItem input[type=radio]:checked + label img {
-    transform: scale(1.2); }
   .timeItem input[type=radio]:checked + label p {
-    transform: scale(1.1);
     border: 2px solid rgba(28, 0, 64, 0.8);
     box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
     background-color: #edf8f9; }
 
-.timeItem:hover label img, .timeItem:focus label img {
-  transform: scale(1.2); }
-
 .timeItem:hover label p, .timeItem:focus label p {
-  transform: scale(1.1);
   border: 2px solid rgba(28, 0, 64, 0.8);
   box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
   background-color: #edf8f9; }
 
-fieldset.hoursADay {
+.hoursADay {
   background-color: rgba(28, 0, 64, 0.8); }
 
 .hoursADay .wrapper {
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -341,7 +361,7 @@ fieldset.hoursADay {
     margin-left: 10px;
     color: white; }
   .hoursADay .wrapper div {
-    width: 100px;
+    width: 50%;
     margin-left: 20px;
     display: -ms-flexbox;
     display: flex;
@@ -350,8 +370,7 @@ fieldset.hoursADay {
     -ms-flex-align: center;
         align-items: center; }
     .hoursADay .wrapper div input[type=number] {
-      padding-left: 10px;
-      width: 70px;
+      width: 100%;
       color: #4d3341;
       height: 35px;
       font-size: 2rem;
@@ -367,11 +386,13 @@ fieldset.hoursADay {
     margin-top: 70px;
     width: 20%;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 10px;
     border: 2px solid #68c2cc;
     color: #68c2cc;
-    background: none; }
+    background: none;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 600; }
     .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:active {
       background: #68c2cc;
       color: white; }
@@ -392,7 +413,9 @@ fieldset.hoursADay {
       width: 100%;
       height: 80vh;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -ms-flex-align: start;
+          align-items: flex-start; }
       .results .wrapper ul li {
         margin: 0 5px;
         width: calc(33% - 10px);
@@ -418,6 +441,20 @@ fieldset.hoursADay {
       height: 200px;
       margin: 5px; } }
 
+@media (min-width: 940px) {
+  .daysBinge {
+    height: 100vh; }
+  .timeItem input[type=radio]:checked + label img {
+    transform: scale(1.2); }
+  .timeItem input[type=radio]:checked + label p {
+    transform: scale(1.1); }
+  .timeItem label img, .timeItem label p {
+    transform: scale(1.2); } }
+
+@media (max-width: 768px) {
+  .timeItem label p {
+    font-size: 1.4rem; } }
+
 @media (max-width: 640px) {
   .genreSelection {
     width: 90%; }
@@ -427,13 +464,13 @@ fieldset.hoursADay {
         font-size: 4rem; }
   .timeSelection {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  fieldset.daysBinge .timeItem {
-    width: 30%;
-    margin-bottom: 30px; }
-    fieldset.daysBinge .timeItem label p {
-      font-size: 1.4rem;
-      margin-top: 10px; } }
+        flex-wrap: wrap;
+    padding: 5px; }
+    .timeSelection .timeItem {
+      width: 27%;
+      margin-top: 20px; }
+      .timeSelection .timeItem label p {
+        margin-top: 10px; } }
 
 @media (max-width: 480px) {
   .genreSelection {
@@ -494,7 +531,7 @@ header {
 footer {
   margin-top: 70px;
   background: #d3d3d3;
-  color: #4c618c;
+  color: #1c0040;
   padding: 50px; }
   footer .wrapper {
     display: -ms-flexbox;
@@ -512,6 +549,6 @@ footer {
       font-family: "Source Sans Pro", sans-serif; }
       footer .wrapper p a {
         text-decoration: none;
-        padding-bottom: 2px;
-        color: #4c618c;
-        border-bottom: 1px dotted #4c618c; }
+        color: #1c0040; }
+        footer .wrapper p a:hover {
+          color: #4c618c; }
