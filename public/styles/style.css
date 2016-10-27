@@ -507,8 +507,7 @@ fieldset.hoursADay {
 header {
   font-family: "BioRhyme", serif;
   font-weight: 800;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
   header .wrapper {
     height: 100%;
     display: -ms-flexbox;
@@ -518,7 +517,8 @@ header {
     -ms-flex-pack: start;
         justify-content: flex-start;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    position: relative; }
     header .wrapper h1 {
       margin-bottom: 0;
       text-align: center;
@@ -536,8 +536,11 @@ header {
       font-weight: 400;
       margin-top: 0;
       margin-bottom: 0; }
-    header .wrapper img {
-      width: 75%; }
+    header .wrapper .headerImgContainer {
+      width: 75%;
+      margin: 0 auto; }
+      header .wrapper .headerImgContainer img {
+        width: 100%; }
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -547,6 +550,10 @@ header {
       color: #1c0040;
       animation: 1s bounce infinite;
       cursor: pointer; }
+
+@media (max-height: 612px) {
+  header img {
+    width: 60%; } }
 
 footer {
   margin-top: 70px;
