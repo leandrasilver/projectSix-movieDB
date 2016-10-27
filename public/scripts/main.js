@@ -79,6 +79,7 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text(tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text(tvIDsResultsData.vote_average);
 		var $resultsImage = $('<img>').attr('src', 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path);
+		var $tvOverview = $('<p>').text(tvIDsResultsData.overview);
 
 		$('.showName').append($tvTitle);
 		$('.seasons').append($seasonsNum);
