@@ -178,7 +178,11 @@ header {
       margin-top: 0;
       margin-bottom: 0; }
     header .wrapper img {
+<<<<<<< HEAD
       width: 80%; }
+=======
+      width: 100%; }
+>>>>>>> 4641d6468d7d27403fcd33cf187563116a4d5901
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -189,6 +193,21 @@ header {
       animation: 1s bounce infinite;
       cursor: pointer; }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 480px) {
+  header .wrapper h3 {
+    font-size: 2rem; }
+  header .wrapper h1 {
+    font-size: 2rem; } }
+
+@media (max-width: 414px) {
+  header h1 {
+    padding-bottom: 30px; }
+  header h3 {
+    padding-bottom: 20px; } }
+
+>>>>>>> 4641d6468d7d27403fcd33cf187563116a4d5901
 @media (min-height: 612px) {
   header .wrapper img {
     width: 60%; } }
