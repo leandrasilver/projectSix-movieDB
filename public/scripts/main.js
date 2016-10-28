@@ -138,10 +138,12 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
 
-			$('.fa-angle-up').on('click', function () {
+			$('.imgContainer i').on('click', function () {
 				var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('overview');
 				$imgContainer.append($showOverview);
-				$('.overview').show();
+
+				$(this).toggleClass('fa-angle-down fa-angle-up');
+				$('.overview').toggleClass('showOverview');
 
 				$('.more').readmore({
 					speed: 75,

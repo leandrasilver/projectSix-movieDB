@@ -564,6 +564,8 @@ fieldset.hoursADay {
           text-align: left;
           line-height: 1.8rem;
           letter-spacing: .65px; }
+        .results .wrapper .slider .imgContainer .showOverview {
+          display: block; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
@@ -659,13 +661,3 @@ fieldset.hoursADay {
       margin: 0 auto; }
     .hoursADay .wrapper input[type=number] {
       margin-top: 40px; } }
-
-@media (max-height: 612px) {
-  .results {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    padding-top: 50px; } }
