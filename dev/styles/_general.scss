@@ -237,7 +237,7 @@ fieldset.hoursADay {
 		justify-content:center;
 		align-items:center;
 		input[type=number] {
-			width: 50%;
+			width: 75px;
 			padding-left: 10px;
 			color:$darkSlate;
 			height: 35px;
@@ -287,12 +287,32 @@ fieldset.hoursADay {
 
 // Results Section Styles
 
+.jsHide {
+	display:none;
+}
+
+.jsOverview {
+	position: absolute;
+	bottom: 0;
+	display:block;
+	font-size: 1.3rem;
+	font-family: $source;
+	transition: 0.5s ease-in;
+	background-color: rgba(255,255,255,0.75);
+	padding: 20px;
+	text-align: left;
+	line-height:1.8rem;
+	letter-spacing: .65px;
+	transition:0.3s all ease;
+}
+
 .results {
 	display: none;
 	height: 100vh;
 	margin: 100px 0;
 	text-align: center;
 	font-family: $bodyFont;
+	transition:0.3s all ease;
 	.wrapper {
 		width: 100%;
 		.refresh{
@@ -325,6 +345,7 @@ fieldset.hoursADay {
 				&:hover i, &:focus i {
 					display: block;
 				}
+
 				.overview{
 					position: absolute;
 					display: none;
@@ -347,6 +368,7 @@ fieldset.hoursADay {
 				.showOverview {
 					display: block;
 				}
+				
 			}
 		}
 		h3 {
@@ -359,6 +381,11 @@ fieldset.hoursADay {
 			font-size: 1.5rem;
 		}
 	}
+}
+
+// FLickity overwrites
+ol.flickity-page-dots li.dot{
+	background-color: $turq;
 }
 
 // Breakpoints
@@ -478,7 +505,10 @@ fieldset.hoursADay {
 		input[type=number] {
 			margin-top:40px;
 		}
-	}	
+	}
+	.results .wrapper .slider .tvShow {
+		width: 100%;
+	}
 }	
 
 @media (max-width: 414px) {

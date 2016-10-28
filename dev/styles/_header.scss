@@ -55,11 +55,15 @@ header {
 
 @media (min-height: 612px) {
 	header {
-		.wrapper{
-		img {
-			width: 60%;
+		padding:30px;
+		.wrapper {
+			h3 {
+				font-size: 2rem;
+			}
+			img {
+				width: 60%;
+			}
 		}
-	}
 	}
 }
 
