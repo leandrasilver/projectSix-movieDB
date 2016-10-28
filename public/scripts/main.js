@@ -69,23 +69,24 @@ couchPotatoApp.getTVInfo = function (data) {
 	(_$ = $).when.apply(_$, tvShows)
 	//Then when they have come back do a similar thing but instead we gather them up.
 	.then(function () {
-		for (var _len = arguments.length, finishiedTVShows = Array(_len), _key = 0; _key < _len; _key++) {
-			finishiedTVShows[_key] = arguments[_key];
+		for (var _len = arguments.length, finishedTVShows = Array(_len), _key = 0; _key < _len; _key++) {
+			finishedTVShows[_key] = arguments[_key];
 		}
 
 		//Map just the data object
-		finishiedTVShows = finishiedTVShows.map(function (show) {
+		finishedTVShows = finishedTVShows.map(function (show) {
 			return show[0];
 		});
 		//Then add it to the page
-		finishiedTVShows.forEach(function (tvShow) {
+		finishedTVShows.forEach(function (tvShow) {
 			couchPotatoApp.filterTv(tvShow);
 		});
 		//Show the results
 		$('.results').show();
 		//Start fliciky 
 		$('.slider').flickity({
-			imagesLoaded: true
+			imagesLoaded: true,
+			wrapAround: true
 		});
 	});
 }; //end getTVinfo

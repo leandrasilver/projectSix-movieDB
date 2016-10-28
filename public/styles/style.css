@@ -148,8 +148,7 @@ img {
 header {
   font-family: "BioRhyme", serif;
   font-weight: 800;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
   header .wrapper {
     height: 100%;
     display: -ms-flexbox;
@@ -159,7 +158,8 @@ header {
     -ms-flex-pack: start;
         justify-content: flex-start;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    position: relative; }
     header .wrapper h1 {
       margin-bottom: 0;
       text-align: center;
@@ -177,8 +177,11 @@ header {
       font-weight: 400;
       margin-top: 0;
       margin-bottom: 0; }
-    header .wrapper img {
-      width: 75%; }
+    header .wrapper .headerImgContainer {
+      width: 75%;
+      margin: 0 auto; }
+      header .wrapper .headerImgContainer img {
+        width: 100%; }
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -188,6 +191,10 @@ header {
       color: #1c0040;
       animation: 1s bounce infinite;
       cursor: pointer; }
+
+@media (max-height: 612px) {
+  header img {
+    width: 60%; } }
 
 footer {
   margin-top: 70px;
@@ -497,7 +504,9 @@ fieldset.hoursADay {
     .results .wrapper .slider .tvShow {
       width: 33%; }
     .results .wrapper .slider img {
-      width: 100%; }
+      width: 100%;
+      height: 544px;
+      border-radius: 7px; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
@@ -505,10 +514,6 @@ fieldset.hoursADay {
     .results .wrapper p {
       margin: 5px 0;
       font-size: 1.5rem; }
-    .results .wrapper img {
-      width: 100%;
-      height: 95%;
-      border-radius: 7px; }
 
 @media (max-width: 940px) {
   .genreSelection {
@@ -605,103 +610,6 @@ fieldset.hoursADay {
 @media (max-width: 414px) {
   .genreSelection .genreItem {
     width: 100%;
-    height: 150px; } }
-
-@keyframes bounce {
-  50% {
-    bottom: 0px; } }
-
-header {
-  font-family: "BioRhyme", serif;
-  font-weight: 800;
-  height: 100vh; }
-  header .wrapper {
-    height: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-align: center;
-        align-items: center;
-    position: relative; }
-    header .wrapper h1 {
-      margin-bottom: 0;
-      text-align: center;
-      font-size: 10rem;
-      font-family: "Ultra", serif;
-      font-weight: 400;
-      letter-spacing: 9px;
-      margin-bottom: 0;
-      text-align: center;
-      color: #1c0040; }
-    header .wrapper h3 {
-      text-align: center;
-      font-size: 3rem;
-      font-family: 'BioRhyme', serif;
-      font-weight: 400;
-      margin-top: 0;
-      margin-bottom: 0; }
-    header .wrapper .headerImgContainer {
-      width: 75%;
-      margin: 0 auto; }
-      header .wrapper .headerImgContainer img {
-        width: 100%; }
-    header .wrapper i {
-      font-size: 50px;
-      padding: 30px;
-      bottom: 10px;
-      position: absolute;
-      transform: translateX(-50%);
-      color: #1c0040;
-      animation: 1s bounce infinite;
-      cursor: pointer; }
-
-@media (max-height: 612px) {
-  header img {
-    width: 60%; } }
-
-footer {
-  margin-top: 70px;
-  background: #d3d3d3;
-  color: #1c0040;
-  padding: 50px; }
-  footer .wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center; }
-    footer .wrapper p {
-      margin: 5px 0;
-      text-align: center;
-      font-size: 1.5rem;
-      font-family: "Source Sans Pro", sans-serif;
-      letter-spacing: 1px;
-      line-height: 1.5rem; }
-      footer .wrapper p a {
-        text-decoration: none;
-        color: #1c0040; }
-        footer .wrapper p a:hover {
-          color: #4c618c; }
-
-@media (max-width: 768px) {
-  footer .wrapper p {
-    font-size: 1.2rem; } }
-
-@media (max-width: 650px) {
-  footer {
-    padding: 50px 20px; }
-    footer .wrapper {
-      width: 60%; } }
-
-@media (max-width: 414px) {
-  footer .wrapper {
-    width: 80%; } }
     height: 150px; }
   header h1 {
     padding-bottom: 30px; }

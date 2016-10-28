@@ -297,6 +297,8 @@ fieldset.hoursADay {
 			}
 			img {
 				width: 100%;
+				height: 544px;
+				border-radius: 7px;
 			}
 		}
 		h3 {
@@ -307,11 +309,6 @@ fieldset.hoursADay {
 		p {
 			margin: 5px 0;
 			font-size: 1.5rem;
-		}
-		img {
-			width: 100%;
-			height: 95%;
-			border-radius: 7px;
 		}
 	}
 }

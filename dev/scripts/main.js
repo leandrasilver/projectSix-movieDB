@@ -65,20 +65,21 @@ couchPotatoApp.getTVInfo = function(data) {
 	//NOTE: the spread operator ... is used to call $.when with all the shows as arguments
 	$.when(...tvShows)
 		//Then when they have come back do a similar thing but instead we gather them up.
-		.then(function(...finishiedTVShows) {
+		.then(function(...finishedTVShows) {
 			//Map just the data object
-			finishiedTVShows = finishiedTVShows.map(function(show) {
+			finishedTVShows = finishedTVShows.map(function(show) {
 				return show[0]
 			});
 			//Then add it to the page
-			finishiedTVShows.forEach(function(tvShow) {
+			finishedTVShows.forEach(function(tvShow) {
 				couchPotatoApp.filterTv(tvShow);
 			});
 			//Show the results
 			$('.results').show();
 			//Start fliciky 
 			$('.slider').flickity({
-				imagesLoaded: true
+				imagesLoaded: true,
+				wrapAround: true
 			});
 		});
 }; //end getTVinfo
