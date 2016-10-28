@@ -34,7 +34,7 @@ couchPotatoApp.getInfo = function() {
 			couchPotatoApp.getTVInfo(data);
 		});
 
-		$('fieldset, header').hide();
+		$('fieldset, header, footer').hide();
 		$('.results').css('opacity', '1')
 	});		
 }; //end getinfo
@@ -143,6 +143,7 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 				  collapsedHeight: 200
 				});
 			});	
+
 		}
 	}
 } //end couchPotatoApp.filterTv

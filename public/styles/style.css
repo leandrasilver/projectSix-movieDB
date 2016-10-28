@@ -178,7 +178,7 @@ header {
       margin-top: 0;
       margin-bottom: 0; }
     header .wrapper img {
-      width: 100%; }
+      width: 80%; }
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -188,6 +188,14 @@ header {
       color: #1c0040;
       animation: 1s bounce infinite;
       cursor: pointer; }
+
+@media (min-height: 612px) {
+  header {
+    padding: 30px; }
+    header .wrapper h3 {
+      font-size: 2rem; }
+    header .wrapper img {
+      width: 60%; } }
 
 @media (max-width: 480px) {
   header {
@@ -294,8 +302,8 @@ fieldset {
   -ms-flex-align: center;
       align-items: center;
   width: 80%;
-  margin: 0 auto;
-  font-family: "BioRhyme", serif; }
+  font-family: "BioRhyme", serif;
+  margin: 0 auto; }
   .genreSelection .genreItem {
     width: calc(25% - 10px);
     height: 200px;
@@ -520,7 +528,8 @@ fieldset.hoursADay {
   height: 100vh;
   margin: 100px 0;
   text-align: center;
-  font-family: "BioRhyme", serif; }
+  font-family: "BioRhyme", serif;
+  transition: 0.3s all ease; }
   .results .wrapper {
     width: 100%; }
     .results .wrapper .refresh {
@@ -538,8 +547,8 @@ fieldset.hoursADay {
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
-          font-size: 7rem;
-          color: white;
+          font-size: 9rem;
+          color: #68c2cc;
           z-index: 1;
           transition: display 0.3s ease; }
         .results .wrapper .slider .imgContainer img {
@@ -550,11 +559,15 @@ fieldset.hoursADay {
           display: block; }
         .results .wrapper .slider .imgContainer .overview {
           position: absolute;
-          display: none;
           bottom: 0;
           font-size: 1.3rem;
           font-family: "Source Sans Pro", sans-serif;
-          transition: 0.5s ease-in; }
+          transition: 0.5s ease-in;
+          background-color: rgba(255, 255, 255, 0.75);
+          padding: 20px;
+          text-align: left;
+          line-height: 1.8rem;
+          letter-spacing: .65px; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
