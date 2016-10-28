@@ -197,10 +197,9 @@ header {
     width: 60%; } }
 
 footer {
-  margin-top: 70px;
-  background: #d3d3d3;
-  color: #1c0040;
-  padding: 50px; }
+  background: #FFF;
+  color: #000;
+  padding: 20px; }
   footer .wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -210,12 +209,19 @@ footer {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center; }
+    footer .wrapper .credits {
+      letter-spacing: .5px;
+      font-size: 1.3rem; }
+    footer .wrapper .fa {
+      color: #56B9C2; }
+    footer .wrapper span {
+      letter-spacing: 1px; }
     footer .wrapper p {
       margin: 5px 0;
       text-align: center;
       font-size: 1.5rem;
       font-family: "Source Sans Pro", sans-serif;
-      letter-spacing: 1px;
+      letter-spacing: 1.75px;
       line-height: 1.5rem; }
       footer .wrapper p a {
         text-decoration: none;
@@ -252,7 +258,7 @@ h3 {
   font-size: 2rem;
   text-align: center;
   font-family: "BioRhyme", serif;
-  color: #1c0040; }
+  color: #3B4C7B; }
 
 input[type="radio"] {
   display: none; }
@@ -432,7 +438,7 @@ fieldset {
   background-color: #edf8f9; }
 
 fieldset.hoursADay {
-  background-color: #1c0040; }
+  background-color: rgba(224, 249, 249, 0.5); }
 
 .hoursADay .wrapper {
   width: 100%;
@@ -445,7 +451,7 @@ fieldset.hoursADay {
   .hoursADay .wrapper h2 {
     text-align: center;
     margin-left: 10px;
-    color: white;
+    color: #3B4C7B;
     font-size: 2.5rem; }
   .hoursADay .wrapper div {
     width: 10%;
@@ -457,7 +463,8 @@ fieldset.hoursADay {
     -ms-flex-align: center;
         align-items: center; }
     .hoursADay .wrapper div input[type=number] {
-      width: 100%;
+      width: 50%;
+      padding-left: 10px;
       color: #4d3341;
       height: 35px;
       font-size: 2rem;
@@ -468,21 +475,22 @@ fieldset.hoursADay {
         box-shadow: 1px 1px 5px #1c0040; }
 
 .submitField {
-  background: none;
+  background-color: rgba(224, 249, 249, 0.5);
   padding: 0; }
 
 .submitWrap {
   text-align: center;
   width: 100%; }
   .submitWrap input[type=submit] {
-    margin-top: 70px;
+    margin: 70px 0px;
     min-width: 100px;
-    height: 50px;
+    height: 60px;
+    padding: 0px 25px;
     font-size: 2rem;
     border-radius: 10px;
     border: 2px solid #68c2cc;
-    color: #68c2cc;
-    background: none;
+    color: #3B4C7B;
+    background: #FFF;
     font-family: "Abhaya Libre", serif;
     font-weight: 600; }
     .submitWrap input[type=submit]:hover, .submitWrap input[type=submit]:active {
@@ -559,23 +567,10 @@ fieldset.hoursADay {
       .timeSelection .timeItem label p {
         margin-top: 10px; }
   .hoursADay .wrapper {
-    width: 80%; }
-    .hoursADay .wrapper div {
-      width: 20%; }
-  .hoursADay .wrapper {
     display: block; }
-    .hoursADay .wrapper h2 {
-      text-align: center;
-      margin-left: 0; }
     .hoursADay .wrapper div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
-      -ms-flex-align: center;
-          align-items: center;
-      width: 100%;
-      margin-left: 0; }
+      width: 20%;
+      margin: 0 auto; }
     .hoursADay .wrapper input[type=number] {
       margin-top: 40px; }
   .results .wrapper .slider .tvShow {
@@ -607,6 +602,14 @@ fieldset.hoursADay {
   h1 {
     font-size: 2rem; } }
 
+.hoursADay .wrapper {
+  display: block; }
+  .hoursADay .wrapper div {
+    width: 20%;
+    margin: 0 auto; }
+  .hoursADay .wrapper input[type=number] {
+    margin-top: 40px; }
+
 @media (max-width: 414px) {
   .genreSelection .genreItem {
     width: 100%;
@@ -614,4 +617,11 @@ fieldset.hoursADay {
   header h1 {
     padding-bottom: 30px; }
   header h3 {
-    padding-bottom: 20px; } }
+    padding-bottom: 20px; }
+  .hoursADay .wrapper {
+    display: block; }
+    .hoursADay .wrapper div {
+      width: 20%;
+      margin: 0 auto; }
+    .hoursADay .wrapper input[type=number] {
+      margin-top: 40px; } }
