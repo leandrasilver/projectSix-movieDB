@@ -338,6 +338,9 @@ fieldset.hoursADay {
 					line-height:1.8rem;
 					letter-spacing: .65px;
 				}
+				.showOverview {
+					display: block;
+				}
 			}
 		}
 		h3 {
@@ -488,17 +491,5 @@ fieldset.hoursADay {
 		input[type=number] {
 			margin-top:40px;
 		}
-	}
-}
-
-//Non-retina screens
-
-
-@media (max-height: 612px) {
-	.results {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		padding-top: 50px;
 	}
 }
