@@ -82,19 +82,15 @@ couchPotatoApp.getTVInfo = function (data) {
 		finishedTVShows.forEach(function (tvShow) {
 			couchPotatoApp.filterTv(tvShow);
 		});
+
+		// Toggle overview on and off
 		$('.imgContainer').on('click', 'i', function () {
 
 			console.log(this);
 			$(this).toggleClass('fa-angle-down');
 			$(this).nextAll('p').toggleClass('jsOverview');
-
-			// $('.overview').readmore({
-			//   speed: 75,
-			//   lessLink: '<a href="#">Read less</a>',
-			//   moreLink: '<a href="#">Read more</a>',
-			//   collapsedHeight: 200
-			// });			
 		});
+
 		//Show the results
 		$('.results').show();
 		//Start fliciky 
@@ -153,17 +149,7 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 
 			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
-<<<<<<< HEAD
 			$imgContainer.append($showOverview);
-=======
-				$('.more').readmore({
-					speed: 75,
-					lessLink: '<a href="#">Read less</a>',
-					moreLink: '<a href="#">Read more</a>',
-					collapsedHeight: 200
-				});
-			});
->>>>>>> 8e7cd0c3742f9e840e80a4016ad3658f16c06861
 		}
 	}
 }; //end couchPotatoApp.filterTv
