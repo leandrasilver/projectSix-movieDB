@@ -82,6 +82,15 @@ couchPotatoApp.getTVInfo = function (data) {
 		finishedTVShows.forEach(function (tvShow) {
 			couchPotatoApp.filterTv(tvShow);
 		});
+
+		// Toggle overview on and off
+		$('.imgContainer').on('click', 'i', function () {
+
+			console.log(this);
+			$(this).toggleClass('fa-angle-down');
+			$(this).nextAll('p').toggleClass('jsOverview');
+		});
+
 		//Show the results
 		$('.results').show();
 		//Start fliciky 
@@ -138,20 +147,9 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
 
-			$('.imgContainer i').on('click', function () {
-				var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('overview');
-				$imgContainer.append($showOverview);
+			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
-				$(this).toggleClass('fa-angle-down fa-angle-up');
-				$('.overview').toggleClass('showOverview');
-
-				$('.more').readmore({
-					speed: 75,
-					lessLink: '<a href="#">Read less</a>',
-					moreLink: '<a href="#">Read more</a>',
-					collapsedHeight: 200
-				});
-			});
+			$imgContainer.append($showOverview);
 		}
 	}
 }; //end couchPotatoApp.filterTv
