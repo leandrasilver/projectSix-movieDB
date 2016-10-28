@@ -34,6 +34,7 @@ couchPotatoApp.getInfo = function() {
 			couchPotatoApp.getTVInfo(data);
 		});
 
+		$('fieldset, header').hide();
 		$('.results').css('opacity', '1')
 	});		
 }; //end getinfo
@@ -127,4 +128,8 @@ $(function() {
 	couchPotatoApp.init();
 	// SmoothScroll on anchor tags
 	$('a').smoothScroll();
+
+	$('.refresh').on('click', function(){
+	    window.location.reload(true);
+	});
 });
