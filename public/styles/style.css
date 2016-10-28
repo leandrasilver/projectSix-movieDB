@@ -282,11 +282,12 @@ fieldset {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  width: 100%;
-  font-family: "BioRhyme", serif; }
+  width: 80%;
+  font-family: "BioRhyme", serif;
+  margin: 0 auto; }
   .genreSelection .genreItem {
     width: calc(25% - 10px);
-    height: 265px;
+    height: 200px;
     margin: 5px;
     display: -ms-flexbox;
     display: flex;
@@ -511,44 +512,38 @@ fieldset.hoursADay {
   font-family: "BioRhyme", serif; }
   .results .wrapper {
     width: 100%; }
-<<<<<<< HEAD
-    .results .wrapper .slider .tvShow {
-      width: 33%; }
-    .results .wrapper .slider .imgContainer {
-      position: relative;
-      margin: 0 5px; }
-      .results .wrapper .slider .imgContainer i {
-        position: absolute;
-        display: none;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 7rem;
-        color: white;
-        z-index: 1;
-        transition: display 0.3s ease; }
-      .results .wrapper .slider .imgContainer img {
-        width: 100%;
-        height: 540px;
-        border-radius: 7px; }
-      .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
-        display: block; }
-      .results .wrapper .slider .imgContainer .overview {
-        position: absolute;
-        bottom: 0;
-        font-size: 1.3rem;
-        font-family: "Source Sans Pro", sans-serif;
-        transition: 0.5s ease-in; }
-=======
     .results .wrapper .refresh {
       background-color: #FFF; }
     .results .wrapper .slider {
       padding-bottom: 50px; }
       .results .wrapper .slider .tvShow {
         width: 33%; }
-      .results .wrapper .slider img {
-        width: 100%; }
->>>>>>> f5052848c22ada9b9b19bc7e00deae642ac198e9
+      .results .wrapper .slider .imgContainer {
+        position: relative;
+        margin: 0 5px; }
+        .results .wrapper .slider .imgContainer i {
+          position: absolute;
+          display: none;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 7rem;
+          color: white;
+          z-index: 1;
+          transition: display 0.3s ease; }
+        .results .wrapper .slider .imgContainer img {
+          width: 100%;
+          height: 540px;
+          border-radius: 7px; }
+        .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
+          display: block; }
+        .results .wrapper .slider .imgContainer .overview {
+          position: absolute;
+          display: none;
+          bottom: 0;
+          font-size: 1.3rem;
+          font-family: "Source Sans Pro", sans-serif;
+          transition: 0.5s ease-in; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
@@ -659,3 +654,13 @@ fieldset.hoursADay {
       margin: 0 auto; }
     .hoursADay .wrapper input[type=number] {
       margin-top: 40px; } }
+
+@media (max-height: 612px) {
+  .results {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    padding-top: 50px; } }
