@@ -37,7 +37,7 @@ header {
 			margin-bottom: 0;
 		}
 		img {
-			width: 100%;
+			width: 80%;
 		}
 		i {
 			font-size:50px;
@@ -52,19 +52,30 @@ header {
 	}
 }
 
-@media(max-width: 480px) {
+
+@media (min-height: 612px) {
 	header {
-		.wrapper {
-			h3 {
+		.wrapper{
+		img {
+			width: 60%;
+		}
+	}
+	}
+}
+
+@media(max-width: 480px) {
+	header{
+		padding:30px;
+		.wrapper{
+			h3{
 				font-size: 2rem;
 			}
-			h1 {
+			h1{
 				font-size: 7rem;
 			}
 		}
 	}
 }
-
 @media (max-width: 414px) {
 	header {
 		h1 {
