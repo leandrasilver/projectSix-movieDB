@@ -36,12 +36,8 @@ header {
 			margin-top: 0;
 			margin-bottom: 0;
 		}
-		.headerImgContainer {
-			width: 75%;
-			margin: 0 auto;
-			img {
-				width: 100%;
-			}
+		img {
+			width: 100%;
 		}
 		i {
 			font-size:50px;
@@ -56,27 +52,15 @@ header {
 	}
 }
 
-@media (max-height: 612px) {
-	header {
-		img {
-			width: 60%;
-		}
-	}
-}
-
 @media(max-width: 480px) {
-	header{
-		.wrapper{
-			h3{
+	header {
+		.wrapper {
+			h3 {
 				font-size: 2rem;
-				}
-				h1{
-					font-size: 7rem;
-				}
 			}
-		}
-		h1{
-			font-size: 2rem;
+			h1 {
+					font-size: 2rem;
+			}
 		}
 	}
 }
@@ -88,6 +72,18 @@ header {
 		}
 		h3{
 			padding-bottom: 20px;
+		}
+	}
+}
+
+//Non-retina screens
+
+@media (min-height: 612px) {
+	header {
+		.wrapper {
+			img {
+				width: 60%;
+			}			
 		}
 	}
 }
