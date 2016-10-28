@@ -36,12 +36,8 @@ header {
 			margin-top: 0;
 			margin-bottom: 0;
 		}
-		.headerImgContainer {
-			width: 75%;
-			margin: 0 auto;
-			img {
-				width: 100%;
-			}
+		img {
+			width: 80%;
 		}
 		i {
 			font-size:50px;
@@ -56,31 +52,29 @@ header {
 	}
 }
 
-@media (max-height: 612px) {
+@media (min-height: 612px) {
 	header {
+		.wrapper{
 		img {
 			width: 60%;
 		}
+	}
 	}
 }
 
 @media(max-width: 480px) {
 	header{
+		padding:30px;
 		.wrapper{
 			h3{
 				font-size: 2rem;
-				}
-				h1{
-					font-size: 7rem;
-				}
 			}
-		}
-		h1{
-			font-size: 2rem;
+			h1{
+				font-size: 7rem;
+			}
 		}
 	}
 }
-
 @media (max-width: 414px) {
 	header {
 		h1 {
