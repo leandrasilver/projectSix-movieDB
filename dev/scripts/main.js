@@ -66,20 +66,22 @@ couchPotatoApp.getTVInfo = function(data) {
 	//NOTE: the spread operator ... is used to call $.when with all the shows as arguments
 	$.when(...tvShows)
 		//Then when they have come back do a similar thing but instead we gather them up.
-		.then(function(...finishiedTVShows) {
+		.then(function(...finishedTVShows) {
 			//Map just the data object
-			finishiedTVShows = finishiedTVShows.map(function(show) {
+			finishedTVShows = finishedTVShows.map(function(show) {
 				return show[0]
 			});
 			//Then add it to the page
-			finishiedTVShows.forEach(function(tvShow) {
+			finishedTVShows.forEach(function(tvShow) {
 				couchPotatoApp.filterTv(tvShow);
 			});
 			//Show the results
 			$('.results').show();
 			//Start fliciky 
 			$('.slider').flickity({
-				imagesLoaded: true
+				imagesLoaded: true,
+				wrapAround: true,
+				draggable: false
 			});
 		});
 }; //end getTVinfo
@@ -107,15 +109,40 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 
-		if (tvIDsResultsData.poster_path !== null) {
+		if (tvIDsResultsData.poster_path !== null && tvIDsResultsData.homepage !== undefined) {
 			var $resultsImage = $('<img>').attr({
 				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
-			}); 			
+			}); 
 
-			$tvShowContainer.append($resultsImage, $seasonsNum, $resultsVoteAvg);
+			// var $imgLinkContainer = $('<a>').attr({
+			// 	href: tvIDsResultsData.homepage,
+			// 	target: '_blank'
+			// });
+
+			// $imgLinkContainer.append($resultsImage);
+
+			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
+
+			var $imgContainer = $('<div>').addClass('imgContainer');
+			$imgContainer.append($tvChevron, $resultsImage);
+
+			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
+
+			$('.fa-angle-up').on('click', function() {
+				var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('overview');
+				$imgContainer.append($showOverview);
+				$('.overview').show();
+
+				$('.overview').readmore({
+				  speed: 75,
+				  lessLink: '<a href="#">Read less</a>',
+				  moreLink: '<a href="#">Read more</a>',
+				  collapsedHeight: 200
+				});
+			});	
 		}
 	}
 } //end couchPotatoApp.filterTv

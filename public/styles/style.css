@@ -148,8 +148,7 @@ img {
 header {
   font-family: "BioRhyme", serif;
   font-weight: 800;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
   header .wrapper {
     height: 100%;
     display: -ms-flexbox;
@@ -159,7 +158,8 @@ header {
     -ms-flex-pack: start;
         justify-content: flex-start;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    position: relative; }
     header .wrapper h1 {
       margin-bottom: 0;
       text-align: center;
@@ -177,8 +177,11 @@ header {
       font-weight: 400;
       margin-top: 0;
       margin-bottom: 0; }
-    header .wrapper img {
-      width: 75%; }
+    header .wrapper .headerImgContainer {
+      width: 75%;
+      margin: 0 auto; }
+      header .wrapper .headerImgContainer img {
+        width: 100%; }
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -188,6 +191,10 @@ header {
       color: #1c0040;
       animation: 1s bounce infinite;
       cursor: pointer; }
+
+@media (max-height: 612px) {
+  header img {
+    width: 60%; } }
 
 footer {
   background: #FFF;
@@ -498,11 +505,41 @@ fieldset.hoursADay {
 
 .results {
   display: none;
-  margin-top: 70px;
+  height: 100vh;
+  margin: 100px 0;
   text-align: center;
   font-family: "BioRhyme", serif; }
   .results .wrapper {
     width: 100%; }
+<<<<<<< HEAD
+    .results .wrapper .slider .tvShow {
+      width: 33%; }
+    .results .wrapper .slider .imgContainer {
+      position: relative;
+      margin: 0 5px; }
+      .results .wrapper .slider .imgContainer i {
+        position: absolute;
+        display: none;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 7rem;
+        color: white;
+        z-index: 1;
+        transition: display 0.3s ease; }
+      .results .wrapper .slider .imgContainer img {
+        width: 100%;
+        height: 540px;
+        border-radius: 7px; }
+      .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
+        display: block; }
+      .results .wrapper .slider .imgContainer .overview {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.3rem;
+        font-family: "Source Sans Pro", sans-serif;
+        transition: 0.5s ease-in; }
+=======
     .results .wrapper .refresh {
       background-color: #FFF; }
     .results .wrapper .slider {
@@ -511,6 +548,7 @@ fieldset.hoursADay {
         width: 33%; }
       .results .wrapper .slider img {
         width: 100%; }
+>>>>>>> f5052848c22ada9b9b19bc7e00deae642ac198e9
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
@@ -518,10 +556,6 @@ fieldset.hoursADay {
     .results .wrapper p {
       margin: 5px 0;
       font-size: 1.5rem; }
-    .results .wrapper img {
-      width: 100%;
-      height: 95%;
-      border-radius: 7px; }
 
 @media (max-width: 940px) {
   .genreSelection {
