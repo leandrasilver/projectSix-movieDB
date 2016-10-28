@@ -523,6 +523,23 @@ fieldset.hoursADay {
       color: white;
       box-shadow: 1px 1px 5px #68c2cc; }
 
+.jsHide {
+  display: none; }
+
+.jsOverview {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  font-size: 1.3rem;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: 0.5s ease-in;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  text-align: left;
+  line-height: 1.8rem;
+  letter-spacing: .65px;
+  transition: 0.3s all ease; }
+
 .results {
   display: none;
   height: 100vh;
@@ -556,19 +573,6 @@ fieldset.hoursADay {
           height: 540px;
           border-radius: 7px; }
         .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
-          display: block; }
-        .results .wrapper .slider .imgContainer .overview {
-          position: absolute;
-          bottom: 0;
-          font-size: 1.3rem;
-          font-family: "Source Sans Pro", sans-serif;
-          transition: 0.5s ease-in;
-          background-color: rgba(255, 255, 255, 0.75);
-          padding: 20px;
-          text-align: left;
-          line-height: 1.8rem;
-          letter-spacing: .65px; }
-        .results .wrapper .slider .imgContainer .showOverview {
           display: block; }
     .results .wrapper h3 {
       margin: 5px 0;
