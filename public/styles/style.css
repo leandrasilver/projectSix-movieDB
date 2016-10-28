@@ -178,7 +178,11 @@ header {
       margin-top: 0;
       margin-bottom: 0; }
     header .wrapper img {
+<<<<<<< HEAD
+      width: 80%; }
+=======
       width: 100%; }
+>>>>>>> 4641d6468d7d27403fcd33cf187563116a4d5901
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -189,6 +193,8 @@ header {
       animation: 1s bounce infinite;
       cursor: pointer; }
 
+<<<<<<< HEAD
+=======
 @media (max-width: 480px) {
   header .wrapper h3 {
     font-size: 2rem; }
@@ -201,9 +207,24 @@ header {
   header h3 {
     padding-bottom: 20px; } }
 
+>>>>>>> 4641d6468d7d27403fcd33cf187563116a4d5901
 @media (min-height: 612px) {
   header .wrapper img {
     width: 60%; } }
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px; }
+    header .wrapper h3 {
+      font-size: 2rem; }
+    header .wrapper h1 {
+      font-size: 7rem; } }
+
+@media (max-width: 414px) {
+  header h1 {
+    padding-bottom: 30px; }
+  header h3 {
+    padding-bottom: 20px; } }
 
 footer {
   background: #FFF;
@@ -292,8 +313,8 @@ fieldset {
   -ms-flex-align: center;
       align-items: center;
   width: 80%;
-  margin: 0 auto;
-  font-family: "BioRhyme", serif; }
+  font-family: "BioRhyme", serif;
+  margin: 0 auto; }
   .genreSelection .genreItem {
     width: calc(25% - 10px);
     height: 200px;
@@ -536,8 +557,8 @@ fieldset.hoursADay {
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
-          font-size: 7rem;
-          color: white;
+          font-size: 9rem;
+          color: #68c2cc;
           z-index: 1;
           transition: display 0.3s ease; }
         .results .wrapper .slider .imgContainer img {
@@ -552,7 +573,12 @@ fieldset.hoursADay {
           bottom: 0;
           font-size: 1.3rem;
           font-family: "Source Sans Pro", sans-serif;
-          transition: 0.5s ease-in; }
+          transition: 0.5s ease-in;
+          background-color: rgba(255, 255, 255, 0.75);
+          padding: 20px;
+          text-align: left;
+          line-height: 1.8rem;
+          letter-spacing: .65px; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
