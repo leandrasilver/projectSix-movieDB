@@ -131,11 +131,12 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
 
+
 			$('.imgContainer i').on('click', function() {
 				$(this).toggleClass('fa-angle-down fa-angle-up');
 				$('.overview').toggleClass('showOverview');
 
-				$('.overview').readmore({
+				$('.more').readmore({
 				  speed: 75,
 				  lessLink: '<a href="#">Read less</a>',
 				  moreLink: '<a href="#">Read more</a>',
@@ -158,4 +159,15 @@ $(function() {
 	$('.refresh').on('click', function(){
 	    window.location.reload(true);
 	});
+
+	$('.genreItem').on('click', function() {
+		$('body').animate({
+		        scrollTop: $("#daysBinge").offset().top - 70
+		}, 600);
+	})
+	$('.timeItem').on('click', function() {
+		$('body').animate({
+		        scrollTop: $("#hoursADay").offset().top - 70
+		}, 600);
+	})
 });
