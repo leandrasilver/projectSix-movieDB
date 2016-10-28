@@ -347,6 +347,11 @@ fieldset.hoursADay {
 	}
 }
 
+// FLickity overwrites
+ol.flickity-page-dots li.dot{
+	background-color: $turq;
+}
+
 // Breakpoints
 
 @media (max-width: 940px) {
@@ -464,6 +469,9 @@ fieldset.hoursADay {
 		input[type=number] {
 			margin-top:40px;
 		}
+	}
+	.results .wrapper .slider .tvShow {
+		width: 100%;
 	}
 }	
 

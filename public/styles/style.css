@@ -563,6 +563,9 @@ fieldset.hoursADay {
       margin: 5px 0;
       font-size: 1.5rem; }
 
+ol.flickity-page-dots li.dot {
+  background-color: #68c2cc; }
+
 @media (max-width: 940px) {
   .genreSelection {
     width: 80%;
@@ -637,7 +640,9 @@ fieldset.hoursADay {
       margin: 0 auto;
       margin-left: 0; }
     .hoursADay .wrapper input[type=number] {
-      margin-top: 40px; } }
+      margin-top: 40px; }
+  .results .wrapper .slider .tvShow {
+    width: 100%; } }
 
 @media (max-width: 414px) {
   .genreSelection .genreItem {
