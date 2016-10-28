@@ -79,7 +79,8 @@ couchPotatoApp.getTVInfo = function(data) {
 			//Start fliciky 
 			$('.slider').flickity({
 				imagesLoaded: true,
-				wrapAround: true
+				wrapAround: true,
+				draggable: false
 			});
 		});
 }; //end getTVinfo
@@ -107,15 +108,40 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 
-		if (tvIDsResultsData.poster_path !== null) {
+		if (tvIDsResultsData.poster_path !== null && tvIDsResultsData.homepage !== undefined) {
 			var $resultsImage = $('<img>').attr({
 				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
-			}); 			
+			}); 
 
-			$tvShowContainer.append($resultsImage, $seasonsNum, $resultsVoteAvg);
+			// var $imgLinkContainer = $('<a>').attr({
+			// 	href: tvIDsResultsData.homepage,
+			// 	target: '_blank'
+			// });
+
+			// $imgLinkContainer.append($resultsImage);
+
+			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
+
+			var $imgContainer = $('<div>').addClass('imgContainer');
+			$imgContainer.append($tvChevron, $resultsImage);
+
+			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
+
+			$('.fa-angle-up').on('click', function() {
+				var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('overview');
+				$imgContainer.append($showOverview);
+				$('.overview').show();
+
+				$('.overview').readmore({
+				  speed: 75,
+				  lessLink: '<a href="#">Read less</a>',
+				  moreLink: '<a href="#">Read more</a>',
+				  collapsedHeight: 200
+				});
+			});	
 		}
 	}
 } //end couchPotatoApp.filterTv

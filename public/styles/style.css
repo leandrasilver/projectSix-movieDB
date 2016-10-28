@@ -504,17 +504,39 @@ fieldset.hoursADay {
 
 .results {
   display: none;
-  margin-top: 70px;
+  height: 100vh;
+  margin: 100px 0;
   text-align: center;
   font-family: "BioRhyme", serif; }
   .results .wrapper {
     width: 100%; }
     .results .wrapper .slider .tvShow {
       width: 33%; }
-    .results .wrapper .slider img {
-      width: 100%;
-      height: 544px;
-      border-radius: 7px; }
+    .results .wrapper .slider .imgContainer {
+      position: relative;
+      margin: 0 5px; }
+      .results .wrapper .slider .imgContainer i {
+        position: absolute;
+        display: none;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 7rem;
+        color: white;
+        z-index: 1;
+        transition: display 0.3s ease; }
+      .results .wrapper .slider .imgContainer img {
+        width: 100%;
+        height: 540px;
+        border-radius: 7px; }
+      .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
+        display: block; }
+      .results .wrapper .slider .imgContainer .overview {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.3rem;
+        font-family: "Source Sans Pro", sans-serif;
+        transition: 0.5s ease-in; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
