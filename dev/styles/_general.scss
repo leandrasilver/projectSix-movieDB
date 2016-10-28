@@ -294,7 +294,11 @@ fieldset.hoursADay {
 	font-family: $bodyFont;
 	.wrapper {
 		width: 100%;
+		.refresh{
+			background-color: #FFF;
+		}
 		.slider {
+			padding-bottom:50px; 
 			.tvShow {
 				width: 33%;
 			}

@@ -198,6 +198,7 @@ header {
 
 footer {
   background: #FFF;
+  border-top: 1px solid black;
   color: #000;
   padding: 20px; }
   footer .wrapper {
@@ -510,6 +511,7 @@ fieldset.hoursADay {
   font-family: "BioRhyme", serif; }
   .results .wrapper {
     width: 100%; }
+<<<<<<< HEAD
     .results .wrapper .slider .tvShow {
       width: 33%; }
     .results .wrapper .slider .imgContainer {
@@ -537,6 +539,16 @@ fieldset.hoursADay {
         font-size: 1.3rem;
         font-family: "Source Sans Pro", sans-serif;
         transition: 0.5s ease-in; }
+=======
+    .results .wrapper .refresh {
+      background-color: #FFF; }
+    .results .wrapper .slider {
+      padding-bottom: 50px; }
+      .results .wrapper .slider .tvShow {
+        width: 33%; }
+      .results .wrapper .slider img {
+        width: 100%; }
+>>>>>>> f5052848c22ada9b9b19bc7e00deae642ac198e9
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
