@@ -190,10 +190,12 @@ header {
       cursor: pointer; }
 
 @media (max-width: 480px) {
-  header .wrapper h3 {
-    font-size: 2rem; }
-  header .wrapper h1 {
-    font-size: 2rem; } }
+  header {
+    padding: 30px; }
+    header .wrapper h3 {
+      font-size: 2rem; }
+    header .wrapper h1 {
+      font-size: 7rem; } }
 
 @media (max-width: 414px) {
   header h1 {
@@ -474,7 +476,7 @@ fieldset.hoursADay {
     -ms-flex-align: center;
         align-items: center; }
     .hoursADay .wrapper div input[type=number] {
-      width: 50%;
+      width: 75px;
       padding-left: 10px;
       color: #4d3341;
       height: 35px;

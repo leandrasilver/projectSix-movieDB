@@ -54,12 +54,13 @@ header {
 
 @media(max-width: 480px) {
 	header {
+		padding:30px;
 		.wrapper {
 			h3 {
 				font-size: 2rem;
 			}
 			h1 {
-					font-size: 2rem;
+				font-size: 7rem;
 			}
 		}
 	}

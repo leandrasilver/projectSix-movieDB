@@ -237,7 +237,7 @@ fieldset.hoursADay {
 		justify-content:center;
 		align-items:center;
 		input[type=number] {
-			width: 50%;
+			width: 75px;
 			padding-left: 10px;
 			color:$darkSlate;
 			height: 35px;
@@ -464,7 +464,7 @@ fieldset.hoursADay {
 		input[type=number] {
 			margin-top:40px;
 		}
-	}	
+	}
 }	
 
 @media (max-width: 414px) {
