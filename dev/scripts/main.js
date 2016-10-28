@@ -34,7 +34,7 @@ couchPotatoApp.getInfo = function() {
 			couchPotatoApp.getTVInfo(data);
 		});
 
-		$('fieldset, header').hide();
+		$('fieldset, header, footer').hide();
 		$('.results').css('opacity', '1')
 	});		
 }; //end getinfo
@@ -136,7 +136,7 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 				$imgContainer.append($showOverview);
 				$('.overview').show();
 
-				$('.overview').readmore({
+				$('.more').readmore({
 				  speed: 75,
 				  lessLink: '<a href="#">Read less</a>',
 				  moreLink: '<a href="#">Read more</a>',
@@ -159,4 +159,5 @@ $(function() {
 	$('.refresh').on('click', function(){
 	    window.location.reload(true);
 	});
+
 });
