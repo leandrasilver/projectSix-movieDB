@@ -168,4 +168,15 @@ $(function () {
 	$('.refresh').on('click', function () {
 		window.location.reload(true);
 	});
+
+	$('.genreItem').on('click', function () {
+		$('body').animate({
+			scrollTop: $("#daysBinge").offset().top - 70
+		}, 600);
+	});
+	$('.timeItem').on('click', function () {
+		$('body').animate({
+			scrollTop: $("#hoursADay").offset().top - 70
+		}, 600);
+	});
 });
