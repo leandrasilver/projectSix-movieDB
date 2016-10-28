@@ -117,31 +117,28 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 
 		if (tvIDsResultsData.poster_path !== null && tvIDsResultsData.homepage !== undefined) {
+
 			var $resultsImage = $('<img>').attr({
 				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
 			});
 
-			// var $imgLinkContainer = $('<a>').attr({
-			// 	href: tvIDsResultsData.homepage,
-			// 	target: '_blank'
-			// });
-
-			// $imgLinkContainer.append($resultsImage);
-
 			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
 
+			var $showOverview = $('<div>').addClass('overview');
+			var $overviewText = $('<p>').text(tvIDsResultsData.overview);
+
+			$showOverview.append($overviewText);
+
 			var $imgContainer = $('<div>').addClass('imgContainer');
-			$imgContainer.append($tvChevron, $resultsImage);
+
+			$imgContainer.append($tvChevron, $resultsImage, $showOverview);
 
 			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
 
 			$('.imgContainer i').on('click', function () {
-				var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('overview');
-				$imgContainer.append($showOverview);
-
 				$(this).toggleClass('fa-angle-down fa-angle-up');
 				$('.overview').toggleClass('showOverview');
 
