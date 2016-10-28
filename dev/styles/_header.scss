@@ -64,3 +64,32 @@ header {
 	}
 }
 
+@media(max-width: 480px) {
+	header{
+		.wrapper{
+			h3{
+				font-size: 2rem;
+				}
+				h1{
+					font-size: 7rem;
+				}
+			}
+		}
+		h1{
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	header {
+		h1 {
+			padding-bottom: 30px;
+		}
+		h3{
+			padding-bottom: 20px;
+		}
+	}
+}
+
+
