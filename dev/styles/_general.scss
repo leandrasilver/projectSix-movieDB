@@ -514,3 +514,11 @@ header{
 	}
 }
 
+@media (max-height: 612px) {
+	.results {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start
+		padding-top: 50px;
+	}
+}
