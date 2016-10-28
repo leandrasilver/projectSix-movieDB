@@ -16,7 +16,7 @@ h3 {
 	font-size: 2rem;
 	text-align: center;
 	font-family: $headerFont;
-	color: $midnightBlue;
+	color: #3B4C7B;
 }
 
 input[type="radio"] {
@@ -215,7 +215,7 @@ fieldset {
 
 // Styles for hours a day section 
 fieldset.hoursADay {
-	background-color:rgb(28,0,64);
+	background-color: rgba(224, 249, 249, 0.5);
 }
 
 .hoursADay .wrapper {
@@ -226,7 +226,7 @@ fieldset.hoursADay {
 	h2 {
 		text-align: center;
 		margin-left:10px;
-		color:white;
+		color: #3B4C7B;
 		font-size: 2.5rem;
 	}
 	div {
@@ -236,7 +236,8 @@ fieldset.hoursADay {
 		justify-content:center;
 		align-items:center;
 		input[type=number] {
-			width: 100%;
+			width: 50%;
+			padding-left: 10px;
 			color:$darkSlate;
 			height: 35px;
 			font-size: 2rem;
@@ -251,7 +252,7 @@ fieldset.hoursADay {
 }
 
 .submitField {
-	background: none;
+	background-color: rgba(224, 249, 249, 0.5);
 	padding: 0;
 }
 
@@ -259,14 +260,15 @@ fieldset.hoursADay {
 	text-align: center;
 	width: 100%;
 	input[type=submit] {
-		margin-top: 70px;
+		margin: 70px 0px;
 		min-width:100px;
-		height: 50px;
+		height: 60px;
+		padding:0px 25px;
 		font-size: 2rem;
 		border-radius: 10px;
 		border: 2px solid $turq;
-		color: $turq;
-		background: none;
+		color: #3B4C7B;
+		background: #FFF;
 		font-family: $abhaya;
 		font-weight: 600;
 		&:hover, &:active  {
@@ -394,25 +396,12 @@ fieldset.hoursADay {
 			}
 		}
 	}
-	.hoursADay .wrapper {
-		width: 80%;
-		div {
-			width: 20%;
-		}
-	}
 
 	.hoursADay .wrapper {
 		display: block;
-		h2 {
-			text-align: center;
-			margin-left:0;
-		}
 		div {
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			width:100%;
-			margin-left:0;
+			width:20%;
+			margin:0 auto;
 		}
 		input[type=number] {
 			margin-top:40px;
@@ -459,6 +448,16 @@ header{
 		font-size: 2rem;
 	}
 }
+	.hoursADay .wrapper {
+		display: block;
+		div {
+			width:20%;
+			margin:0 auto;
+		}
+		input[type=number] {
+			margin-top:40px;
+		}
+	}
 
 @media (max-width: 414px) {
 	.genreSelection {
@@ -473,6 +472,16 @@ header{
 		}
 		h3{
 			padding-bottom: 20px;
+		}
+	}
+		.hoursADay .wrapper {
+		display: block;
+		div {
+			width:20%;
+			margin:0 auto;
+		}
+		input[type=number] {
+			margin-top:40px;
 		}
 	}
 }
