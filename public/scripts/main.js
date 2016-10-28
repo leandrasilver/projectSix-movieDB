@@ -153,7 +153,17 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 
 			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
+<<<<<<< HEAD
 			$imgContainer.append($showOverview);
+=======
+				$('.more').readmore({
+					speed: 75,
+					lessLink: '<a href="#">Read less</a>',
+					moreLink: '<a href="#">Read more</a>',
+					collapsedHeight: 200
+				});
+			});
+>>>>>>> 8e7cd0c3742f9e840e80a4016ad3658f16c06861
 		}
 	}
 }; //end couchPotatoApp.filterTv
@@ -169,5 +179,16 @@ $(function () {
 
 	$('.refresh').on('click', function () {
 		window.location.reload(true);
+	});
+
+	$('.genreItem').on('click', function () {
+		$('body').animate({
+			scrollTop: $("#daysBinge").offset().top - 70
+		}, 600);
+	});
+	$('.timeItem').on('click', function () {
+		$('body').animate({
+			scrollTop: $("#hoursADay").offset().top - 70
+		}, 600);
 	});
 });

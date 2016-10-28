@@ -345,6 +345,24 @@ fieldset.hoursADay {
 				&:hover i, &:focus i {
 					display: block;
 				}
+
+				.overview{
+					position: absolute;
+					display: none;
+					bottom: 0;
+					font-size: 1.3rem;
+					font-family: $source;
+					transition: 0.5s ease-in;
+					background-color: rgba(255,255,255,0.75);
+					padding: 20px;
+					text-align: left;
+					line-height:1.8rem;
+					letter-spacing: .65px;
+				}
+				.showOverview {
+					display: block;
+				}
+				
 			}
 		}
 		h3 {
