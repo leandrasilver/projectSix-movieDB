@@ -425,7 +425,6 @@ fieldset.hoursADay {
 			}
 		}
 	}
-
 	.hoursADay .wrapper {
 		display: block;
 		div {
@@ -449,34 +448,32 @@ fieldset.hoursADay {
 		width:45%;
 	}
 	.hoursADay .wrapper {
-	display: block;
-	h2 {
-		text-align: center;
-		margin-left:0;
-	}
+		display: block;
+		h2 {
+			text-align: center;
+			margin-left:0;
+		}
+		div {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			width:20%;
+			margin:0 auto;
+			margin-left:0;
+		}
+		input[type=number] {
+			margin-top:40px;
+		}
+	}	
+}	
 
-	div {
-		display:flex;
-		justify-content:center;
-		align-items:center;
-		width:100%;
-		margin-left:0;
-	}
-}
-header{
-	.wrapper{
-		h3{
-			font-size: 2rem;
-			}
-			h1{
-				font-size: 7rem;
-			}
+@media (max-width: 414px) {
+	.genreSelection {
+		.genreItem {
+			width: 100%;
+			height: 150px;
 		}
 	}
-	h1{
-		font-size: 2rem;
-	}
-}
 	.hoursADay .wrapper {
 		display: block;
 		div {
@@ -487,33 +484,10 @@ header{
 			margin-top:40px;
 		}
 	}
-
-@media (max-width: 414px) {
-	.genreSelection {
-		.genreItem {
-			width: 100%;
-			height: 150px;
-		}
-	}
-	header{
-		h1{
-			padding-bottom: 30px;
-		}
-		h3{
-			padding-bottom: 20px;
-		}
-	}
-		.hoursADay .wrapper {
-		display: block;
-		div {
-			width:20%;
-			margin:0 auto;
-		}
-		input[type=number] {
-			margin-top:40px;
-		}
-	}
 }
+
+//Non-retina screens
+
 
 @media (max-height: 612px) {
 	.results {
