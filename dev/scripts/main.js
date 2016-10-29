@@ -80,7 +80,7 @@ couchPotatoApp.getTVInfo = function(data) {
 			$('.imgContainer').on('click', 'i', function() {				
 				console.log(this);
 				$(this).toggleClass('fa-angle-down');
-				$(this).nextAll('p').toggleClass('jsOverview');
+				$(this).nextAll('p').toggleClass('jsOverview jsHide');
 			});	
 
 			//Show the results
@@ -125,7 +125,14 @@ couchPotatoApp.filterTv = function(tvIDsResultsData) {
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
 			}); 
+
 			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
+
+			var $homepage = $('<a>').attr({
+				href: tvIDsResultsData.homepage,
+				target: '_blank'
+			})
+			
 			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
 			var $imgContainer = $('<div>').addClass('imgContainer');

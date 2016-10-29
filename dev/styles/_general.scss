@@ -329,10 +329,9 @@ fieldset.hoursADay {
 				}
 				.jsOverview {
 					position: absolute;
-					// display: none;
 					display: block;
 					bottom: -5px;
-					padding: 0 15px 20px 20px;
+					padding: 15px 20px;
 					font-size: 1.3rem;
 					font-family: $source;
 					transition: all 0.3s ease;
@@ -344,6 +343,10 @@ fieldset.hoursADay {
 					border-radius: 7px;
 					color: $darkSlate;
 					background-color: rgba(255,255,255,0.75);
+					i {
+						font-size: 1.3rem;
+						display: inline-block;
+					}
 				}
 				.jsHide {
 					display: none;
