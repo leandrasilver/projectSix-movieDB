@@ -85,7 +85,6 @@ couchPotatoApp.getTVInfo = function (data) {
 
 		// Toggle overview on and off
 		$('.imgContainer').on('click', 'i', function () {
-
 			console.log(this);
 			$(this).toggleClass('fa-angle-down');
 			$(this).nextAll('p').toggleClass('jsOverview');
@@ -93,6 +92,7 @@ couchPotatoApp.getTVInfo = function (data) {
 
 		//Show the results
 		$('.results').show();
+
 		//Start fliciky 
 		$('.slider').flickity({
 			imagesLoaded: true,
@@ -125,37 +125,21 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 
-		if (tvIDsResultsData.poster_path !== null && tvIDsResultsData.homepage !== undefined) {
+		if (tvIDsResultsData.poster_path !== null) {
 
 			var $resultsImage = $('<img>').attr({
 				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
 			});
-
 			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
-
-			var $showOverview = $('<div>').addClass('overview');
-			var $overviewText = $('<p>').text(tvIDsResultsData.overview);
-
-			$showOverview.append($overviewText);
+			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
 			var $imgContainer = $('<div>').addClass('imgContainer');
-
 			$imgContainer.append($tvChevron, $resultsImage, $showOverview);
 
 			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
 			$('.slider').append($tvShowContainer);
-
-<<<<<<< HEAD
-			$('.imgContainer i').on('click', function () {
-				$(this).toggleClass('fa-angle-down fa-angle-up');
-				$('.overview').toggleClass('showOverview');
-=======
-			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
->>>>>>> 69419d6e7211e371dabbfb364d762714f4a7820c
-
-			$imgContainer.append($showOverview);
 		}
 	}
 }; //end couchPotatoApp.filterTv
