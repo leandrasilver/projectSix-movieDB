@@ -287,25 +287,6 @@ fieldset.hoursADay {
 
 // Results Section Styles
 
-.jsHide {
-	display:none;
-}
-
-.jsOverview {
-	position: absolute;
-	bottom: 0;
-	display:block;
-	font-size: 1.3rem;
-	font-family: $source;
-	transition: 0.5s ease-in;
-	background-color: rgba(255,255,255,0.75);
-	padding: 20px;
-	text-align: left;
-	line-height:1.8rem;
-	letter-spacing: .65px;
-	transition:0.3s all ease;
-}
-
 .results {
 	display: none;
 	height: 100vh;
@@ -326,6 +307,7 @@ fieldset.hoursADay {
 			.imgContainer {
 				position: relative;
 				margin: 0 5px;
+				height: 540px;
 				i {
 					position: absolute;
 					display: none;
@@ -339,30 +321,36 @@ fieldset.hoursADay {
 				}
 				img {
 					width: 100%;
-					height: 540px;
+					height: 100%;
 					border-radius: 7px;
 				}
 				&:hover i, &:focus i {
 					display: block;
 				}
-
-				.overview{
+				.jsOverview {
 					position: absolute;
-					display: none;
-					bottom: 0;
+					display: block;
+					bottom: -5px;
+					padding: 15px 20px;
 					font-size: 1.3rem;
 					font-family: $source;
-					transition: 0.5s ease-in;
+					transition: all 0.3s ease;
+					text-align: left;	
+					height: 200px;
+					line-height: 1.8rem;
+					letter-spacing: 0.65px;
+					overflow: scroll;
+					border-radius: 7px;
+					color: $darkSlate;
 					background-color: rgba(255,255,255,0.75);
-					padding: 20px;
-					text-align: left;
-					line-height:1.8rem;
-					letter-spacing: .65px;
+					i {
+						font-size: 1.3rem;
+						display: inline-block;
+					}
 				}
-				.showOverview {
-					display: block;
+				.jsHide {
+					display: none;
 				}
-				
 			}
 		}
 		h3 {

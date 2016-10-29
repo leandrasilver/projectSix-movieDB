@@ -85,14 +85,14 @@ couchPotatoApp.getTVInfo = function (data) {
 
 		// Toggle overview on and off
 		$('.imgContainer').on('click', 'i', function () {
-
 			console.log(this);
 			$(this).toggleClass('fa-angle-down');
-			$(this).nextAll('p').toggleClass('jsOverview');
+			$(this).nextAll('p').toggleClass('jsOverview jsHide');
 		});
 
 		//Show the results
 		$('.results').show();
+
 		//Start fliciky 
 		$('.slider').flickity({
 			imagesLoaded: true,
@@ -125,31 +125,28 @@ couchPotatoApp.filterTv = function (tvIDsResultsData) {
 		var $seasonsNum = $('<p>').text('Seasons: ' + tvIDsResultsData.number_of_seasons);
 		var $resultsVoteAvg = $('<p>').text('Voter Average: ' + tvIDsResultsData.vote_average);
 
-		if (tvIDsResultsData.poster_path !== null && tvIDsResultsData.homepage !== undefined) {
+		if (tvIDsResultsData.poster_path !== null) {
+
 			var $resultsImage = $('<img>').attr({
 				src: 'https://image.tmdb.org/t/p/original' + tvIDsResultsData.poster_path,
 				alt: tvIDsResultsData.name,
 				title: tvIDsResultsData.name
 			});
 
-			// var $imgLinkContainer = $('<a>').attr({
-			// 	href: tvIDsResultsData.homepage,
-			// 	target: '_blank'
-			// });
-
-			// $imgLinkContainer.append($resultsImage);
-
 			var $tvChevron = $('<i>').addClass('fa fa-angle-up');
 
-			var $imgContainer = $('<div>').addClass('imgContainer');
-			$imgContainer.append($tvChevron, $resultsImage);
-
-			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
-			$('.slider').append($tvShowContainer);
+			var $homepage = $('<a>').attr({
+				href: tvIDsResultsData.homepage,
+				target: '_blank'
+			});
 
 			var $showOverview = $('<p>').text(tvIDsResultsData.overview).addClass('jsHide');
 
-			$imgContainer.append($showOverview);
+			var $imgContainer = $('<div>').addClass('imgContainer');
+			$imgContainer.append($tvChevron, $resultsImage, $showOverview);
+
+			$tvShowContainer.append($imgContainer, $seasonsNum, $resultsVoteAvg);
+			$('.slider').append($tvShowContainer);
 		}
 	}
 }; //end couchPotatoApp.filterTv

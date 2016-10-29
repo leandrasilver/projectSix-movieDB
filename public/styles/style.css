@@ -523,23 +523,6 @@ fieldset.hoursADay {
       color: white;
       box-shadow: 1px 1px 5px #68c2cc; }
 
-.jsHide {
-  display: none; }
-
-.jsOverview {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  font-size: 1.3rem;
-  font-family: "Source Sans Pro", sans-serif;
-  transition: 0.5s ease-in;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 20px;
-  text-align: left;
-  line-height: 1.8rem;
-  letter-spacing: .65px;
-  transition: 0.3s all ease; }
-
 .results {
   display: none;
   height: 100vh;
@@ -557,7 +540,8 @@ fieldset.hoursADay {
         width: 33%; }
       .results .wrapper .slider .imgContainer {
         position: relative;
-        margin: 0 5px; }
+        margin: 0 5px;
+        height: 540px; }
         .results .wrapper .slider .imgContainer i {
           position: absolute;
           display: none;
@@ -570,24 +554,31 @@ fieldset.hoursADay {
           transition: display 0.3s ease; }
         .results .wrapper .slider .imgContainer img {
           width: 100%;
-          height: 540px;
+          height: 100%;
           border-radius: 7px; }
         .results .wrapper .slider .imgContainer:hover i, .results .wrapper .slider .imgContainer:focus i {
           display: block; }
-        .results .wrapper .slider .imgContainer .overview {
+        .results .wrapper .slider .imgContainer .jsOverview {
           position: absolute;
-          display: none;
-          bottom: 0;
+          display: block;
+          bottom: -5px;
+          padding: 15px 20px;
           font-size: 1.3rem;
           font-family: "Source Sans Pro", sans-serif;
-          transition: 0.5s ease-in;
-          background-color: rgba(255, 255, 255, 0.75);
-          padding: 20px;
+          transition: all 0.3s ease;
           text-align: left;
+          height: 200px;
           line-height: 1.8rem;
-          letter-spacing: .65px; }
-        .results .wrapper .slider .imgContainer .showOverview {
-          display: block; }
+          letter-spacing: 0.65px;
+          overflow: scroll;
+          border-radius: 7px;
+          color: #4d3341;
+          background-color: rgba(255, 255, 255, 0.75); }
+          .results .wrapper .slider .imgContainer .jsOverview i {
+            font-size: 1.3rem;
+            display: inline-block; }
+        .results .wrapper .slider .imgContainer .jsHide {
+          display: none; }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
