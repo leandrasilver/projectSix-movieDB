@@ -526,10 +526,20 @@ fieldset.hoursADay {
 .results {
   display: none;
   height: 100vh;
-  margin: 100px 0;
+  margin-bottom: 100px;
   text-align: center;
   font-family: "BioRhyme", serif;
   transition: 0.3s all ease; }
+  .results h2 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    letter-spacing: 9px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #1c0040; }
   .results .wrapper {
     width: 100%; }
     .results .wrapper .refresh {
@@ -537,21 +547,25 @@ fieldset.hoursADay {
     .results .wrapper .slider {
       padding-bottom: 50px; }
       .results .wrapper .slider .tvShow {
-        width: 33%; }
+        width: 33%;
+        transition: 0.3s all ease; }
       .results .wrapper .slider .imgContainer {
         position: relative;
         margin: 0 5px;
         height: 540px; }
         .results .wrapper .slider .imgContainer i {
           position: absolute;
-          display: none;
+          width: 100%;
           bottom: 0;
           left: 50%;
-          transform: translateX(-50%);
-          font-size: 9rem;
+          right: 0;
+          left: 0;
+          font-size: 7rem;
           color: #68c2cc;
           z-index: 1;
-          transition: display 0.3s ease; }
+          transition: display 0.3s ease;
+          background-color: rgba(255, 255, 255, 0.2);
+          transition: 0.3s all ease; }
         .results .wrapper .slider .imgContainer img {
           width: 100%;
           height: 100%;
@@ -560,25 +574,27 @@ fieldset.hoursADay {
           display: block; }
         .results .wrapper .slider .imgContainer .jsOverview {
           position: absolute;
-          display: block;
-          bottom: -5px;
-          padding: 15px 20px;
-          font-size: 1.3rem;
+          opacity: 1;
+          bottom: 65px;
+          padding: 20px 20px 20px 25px;
+          font-size: 1.4rem;
           font-family: "Source Sans Pro", sans-serif;
           transition: all 0.3s ease;
           text-align: left;
-          height: 200px;
-          line-height: 1.8rem;
+          height: 120px;
+          line-height: 2rem;
           letter-spacing: 0.65px;
           overflow: scroll;
-          border-radius: 7px;
+          border-radius: 10px 10px 0 0;
           color: #4d3341;
-          background-color: rgba(255, 255, 255, 0.75); }
+          background-color: rgba(255, 255, 255, 0.9); }
           .results .wrapper .slider .imgContainer .jsOverview i {
             font-size: 1.3rem;
             display: inline-block; }
         .results .wrapper .slider .imgContainer .jsHide {
-          display: none; }
+          opacity: 0; }
+        .results .wrapper .slider .imgContainer .fa-angle-down {
+          background-color: rgba(255, 255, 255, 0.9); }
     .results .wrapper h3 {
       margin: 5px 0;
       font-family: "BioRhyme", serif;
@@ -589,6 +605,29 @@ fieldset.hoursADay {
 
 ol.flickity-page-dots li.dot {
   background-color: #68c2cc; }
+
+.jsKonami {
+  background-image: url("../../images/potatoGif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  animation: fly 10s forwards; }
+
+@keyframes fly {
+  0% {
+    transform: scale(0.1); }
+  50% {
+    top: 40vh;
+    left: 30vw;
+    transform: scale(1.5); }
+  99% {
+    top: 60vh;
+    left: 100vw;
+    transform: scale(0.6); } }
 
 @media (max-width: 940px) {
   .genreSelection {
@@ -608,6 +647,10 @@ ol.flickity-page-dots li.dot {
     transform: scale(1.12); }
   .timeItem input[type=radio]:checked + label p {
     transform: scale(1.12); } }
+
+@media (max-width: 800px) {
+  .results .wrapper .slider .tvShow {
+    width: 50%; } }
 
 @media (max-width: 768px) {
   .timeItem label p {
@@ -639,9 +682,7 @@ ol.flickity-page-dots li.dot {
       width: 20%;
       margin: 0 auto; }
     .hoursADay .wrapper input[type=number] {
-      margin-top: 40px; }
-  .results .wrapper .slider .tvShow {
-    width: 50%; } }
+      margin-top: 40px; } }
 
 @media (max-width: 480px) {
   .genreSelection {

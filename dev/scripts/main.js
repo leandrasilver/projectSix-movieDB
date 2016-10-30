@@ -150,6 +150,7 @@ couchPotatoApp.init = function() {
 
 $(function() {
 	couchPotatoApp.init();
+
 	// SmoothScroll on anchor tags
 	$('a').smoothScroll();
 
@@ -162,9 +163,29 @@ $(function() {
 		        scrollTop: $("#daysBinge").offset().top - 70
 		}, 600);
 	})
+
 	$('.timeItem').on('click', function() {
 		$('body').animate({
 		        scrollTop: $("#hoursADay").offset().top - 70
 		}, 600);
 	})
+
+	// Konami Code
+	var keys = [];
+	var konami = "38,38,40,40,37,39,37,39,66,65";
+
+	$(document).keydown(function(e) {
+		keys.push( e.keyCode );
+
+		if ( keys.toString().indexOf( konami ) >= 0 ) {
+
+			keys= [];
+
+	   		$(".konamiContainer").addClass("jsKonami");
+	 	}
+	});
+
 });
+
+// konami code on header
+
