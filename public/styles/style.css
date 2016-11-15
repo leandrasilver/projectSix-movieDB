@@ -177,8 +177,17 @@ header {
       font-weight: 400;
       margin-top: 0;
       margin-bottom: 0; }
+    header .wrapper div.imageContainer {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      position: relative;
+      z-index: 10; }
     header .wrapper img {
-      width: 80%; }
+      max-width: 100%; }
     header .wrapper i {
       font-size: 50px;
       padding: 30px;
@@ -210,6 +219,14 @@ header {
     padding-bottom: 30px; }
   header h3 {
     padding-bottom: 20px; } }
+
+@media (max-width: 330px) {
+  header .wrapper h1 {
+    font-size: 4rem;
+    margin-top: 80px; }
+  header .wrapper .imageContainer img {
+    height: 200px;
+    width: 300px; } }
 
 @media (min-height: 612px) {
   header .wrapper img {
@@ -337,8 +354,7 @@ fieldset {
         margin-bottom: 20px; }
       .genreSelection .genreItem label:hover, .genreSelection .genreItem label:focus, .genreSelection .genreItem label:active {
         color: #68c2cc;
-        cursor: pointer;
-        opacity: 0.8; }
+        cursor: pointer; }
   .genreSelection .genreNoMargL {
     margin-left: 0; }
   .genreSelection .genreNoMargR {
@@ -405,6 +421,14 @@ fieldset {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg); }
+  50% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-10deg); } }
+
 .timeItem {
   width: 13%;
   display: -ms-flexbox;
@@ -458,6 +482,15 @@ fieldset {
   box-shadow: 1px 1px 5px rgba(28, 0, 64, 0.3);
   background-color: #edf8f9; }
 
+.timeItem:hover img, .timeItem:focus img {
+  animation: 1s shake infinite; }
+
+.timeItem input[type=radio]:checked + label img {
+  transform: scale(1.12); }
+
+.timeItem input[type=radio]:checked + label p {
+  transform: scale(1.12); }
+
 fieldset.hoursADay {
   background-color: rgba(224, 249, 249, 0.5); }
 
@@ -502,6 +535,8 @@ fieldset.hoursADay {
 .submitWrap {
   text-align: center;
   width: 100%; }
+  .submitWrap h3 {
+    color: red; }
   .submitWrap input[type=submit] {
     margin: 70px 0px;
     min-width: 100px;
@@ -602,32 +637,81 @@ fieldset.hoursADay {
     .results .wrapper p {
       margin: 5px 0;
       font-size: 1.5rem; }
+    .results .wrapper a {
+      text-decoration: none;
+      color: #68c2cc;
+      font-size: 1.5rem;
+      position: relative;
+      z-index: 20; }
 
 ol.flickity-page-dots li.dot {
   background-color: #68c2cc; }
 
-.jsKonami {
-  background-image: url("../../images/potatoGif");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 300px;
+.flickity-viewport {
+  height: 110%; }
+
+.preloader {
   position: absolute;
-  top: -100vh;
+  top: 0;
   left: 0;
-  animation: fly 10s forwards; }
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9999;
+  background-image: url("../../images/potatogif.gif");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.konamiContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 80px;
+  display: none; }
+
+.jsKonami {
+  animation: fly 12s forwards;
+  display: block;
+  visibility: hidden; }
 
 @keyframes fly {
   0% {
-    transform: scale(0.1); }
+    z-index: -100;
+    visibility: visible; }
+  25% {
+    left: 10%;
+    top: 60%;
+    width: 100px;
+    z-index: 0; }
+  26% {
+    z-index: 100; }
   50% {
-    top: 40vh;
-    left: 30vw;
-    transform: scale(1.5); }
-  99% {
-    top: 60vh;
-    left: 100vw;
-    transform: scale(0.6); } }
+    width: 500px;
+    top: 65%;
+    left: 40%;
+    z-index: 100; }
+  75% {
+    left: 90%;
+    width: 100px;
+    z-index: 100;
+    visibility: visible; }
+  76% {
+    z-index: -100; }
+  99 {
+    opacity: 1;
+    visibility: hidden;
+    z-index: -100; }
+  100% {
+    top: 50%;
+    left: 50%;
+    z-index: -100; } }
 
 @media (max-width: 940px) {
   .genreSelection {
@@ -642,10 +726,6 @@ ol.flickity-page-dots li.dot {
   .daysBinge {
     height: 100vh; }
   .timeItem:hover img, .timeItem:hover p, .timeItem:focus img, .timeItem:focus p {
-    transform: scale(1.12); }
-  .timeItem input[type=radio]:checked + label img {
-    transform: scale(1.12); }
-  .timeItem input[type=radio]:checked + label p {
     transform: scale(1.12); } }
 
 @media (max-width: 800px) {
